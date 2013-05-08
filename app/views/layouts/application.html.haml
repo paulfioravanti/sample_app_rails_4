@@ -1,10 +1,19 @@
 !!! 5
 %html
   %head
-    %title SampleAppRails4
+    %title= full_title yield(:title)
     = stylesheet_link_tag "application", media: "all",
       "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
+    = render 'layouts/shim'
+    = render 'layouts/i18n_js'
   %body{ class: "#{controller_name}-controller #{action_name}-action" }
-    = yield
+    = render 'layouts/header',
+         controller: @redirect_controller,
+         action: @redirect_action,
+         page: @page_number
+    .container
+      = render 'layouts/messages'
+      = yield
+      = render 'layouts/footer'

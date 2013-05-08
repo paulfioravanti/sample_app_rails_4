@@ -1,0 +1,13 @@
+%li#fat-menu.dropdown
+  %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+    %i.icon-globe
+    = t('.language')
+    %b.caret
+  %ul.dropdown-menu
+    - locale_language_labels.each do |language|
+      %li
+        = link_to language[:label],
+                  controller: controller,
+                  action: action,
+                  set_locale: language[:locale],
+                  page: page

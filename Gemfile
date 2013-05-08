@@ -8,11 +8,11 @@ gem 'pg', '0.15.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.0.rc1'
 # Twitter frameworks to make nice UI design elements
-# gem 'bootstrap-sass', '2.3.1.0'
+gem 'bootstrap-sass', '2.3.1.0'
 # will_paginate pagination for Bootstrap
 # gem 'bootstrap-will_paginate', '0.0.9'
 # Font Awesome icons
-# gem 'font-awesome-sass-rails', '3.0.2.2'
+gem 'font-awesome-sass-rails', '3.0.2.2'
 # Simplified forms
 # gem 'simple_form', '2.1.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -26,17 +26,17 @@ gem 'turbolinks', '1.1.1'
 # Build JSON APIs with ease
 gem 'jbuilder', '1.0.2'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '3.0.1'
+gem 'bcrypt-ruby', '3.0.1'
 # App secret key configuration
 gem 'figaro', '0.6.4'
 # Substiture ERb for Haml
 gem 'haml-rails', '0.4.0'
 # Use of Markdown for static content in views
-# gem 'rdiscount', '2.0.7.2'
+gem 'rdiscount', '2.0.7.3'
 # For JQuery timeago library
 # gem 'rails-timeago', '2.3.0'
 # For accessing i18n in js files
-# gem 'i18n-js', '2.1.2'
+gem 'i18n-js', '2.1.2'
 # For fake example users with “realistic” names/emails
 # gem 'faker', '1.1.2'
 
@@ -72,17 +72,17 @@ end
 #   gem 'meta_request', '0.2.4'
 # end
 
-# group :development, :test do
-#   gem 'rspec-rails', '2.13.1'
+group :development, :test do
+  gem 'rspec-rails', '2.13.1'
 #   # for autotesting with rspec
 #   gem 'guard-rspec', '3.0.0'
-#   # Prettier RSpec output
-#   gem 'fuubar', '1.1.0'
-# end
+  # Prettier RSpec output
+  gem 'fuubar', '1.1.0'
+end
 
-# group :test do
-#   # Helps in testing by simulating how a real user would use app
-#   gem 'capybara', '2.1.0'
+group :test do
+  # Helps in testing by simulating how a real user would use app
+  gem 'capybara', '2.1.0'
 #   # Use factories instead of ActiveRecord objects
 #   gem 'factory_girl_rails', '4.2.1'
 #   gem 'shoulda-matchers', '2.1.0'
@@ -101,4 +101,4 @@ end
 #   # Code coverage reports
 #   gem 'simplecov', '0.7.1', require: false
 #   gem 'coveralls', '0.6.7', require: false
-# end
+end

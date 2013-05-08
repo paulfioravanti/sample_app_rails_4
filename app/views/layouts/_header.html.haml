@@ -1,0 +1,29 @@
+%header.navbar.navbar-fixed-top.navbar-inverse
+  .navbar-inner
+    .container
+      = link_to t('.sample_app'), locale_root_path, id: "logo"
+      %nav
+        %ul.nav.pull-right
+          %li
+            = link_to locale_root_path do
+              %i.icon-home
+              = t('.home')
+          %li
+            = link_to help_path do
+              %i.icon-question-sign
+              = t('.help')
+          / - if signed_in?
+          /   %li
+          /     = link_to users_path do
+          /       %i.icon-user
+          /       = t('.users')
+          /   = render 'layouts/account_dropdown'
+          / - else
+          /   %li
+          /     = link_to signin_path do
+          /       %i.icon-signin
+          /       = t('.sign_in')
+          / = render 'layouts/locale_selector',
+          /           controller: controller,
+          /           action: action,
+          /           page: page
