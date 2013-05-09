@@ -1,0 +1,1 @@
+# Rails::Timeago.default_options limit: -> { 20.days.ago }, nojs: true

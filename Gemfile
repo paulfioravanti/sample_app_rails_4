@@ -10,7 +10,7 @@ gem 'sass-rails', '4.0.0.rc1'
 # Twitter frameworks to make nice UI design elements
 gem 'bootstrap-sass', '2.3.1.0'
 # will_paginate pagination for Bootstrap
-# gem 'bootstrap-will_paginate', '0.0.9'
+gem 'bootstrap-will_paginate', '0.0.9'
 # Font Awesome icons
 gem 'font-awesome-sass-rails', '3.0.2.2'
 # Simplified forms
@@ -50,32 +50,29 @@ group :doc do
   gem 'sdoc', '0.3.20', require: false
 end
 
-# group :development do
-#   # for annotating model files with their properties
-#   gem 'annotate', '2.5.0'
-#   # For html/erb to haml parsing
-#   gem 'hpricot', '0.8.6'
-#   gem 'ruby_parser', '3.1.3'
-#   # Security checking
-#   gem 'brakeman', '1.9.5'
-#   # Code quality
-#   gem 'reek', '1.3.1'
-#   gem 'rails_best_practices', '1.13.5'
+group :development do
+  # for annotating model files with their properties
+  gem 'annotate', '2.5.0'
+  # Security checking
+  gem 'brakeman', github: 'presidentbeef/brakeman'
+  # Code quality
+  gem 'reek', '1.3.1'
+  gem 'rails_best_practices', '1.13.5'
 #   # Query optimization monitoring
-#   gem 'bullet', '4.6.0'
-#   # Debugging information
-#   gem 'rails-footnotes', '3.7.9'
-#   # Better error pages
-#   gem 'better_errors', '0.8.0'
-#   gem 'binding_of_caller', '0.7.1'
-#   # Gem for RailsPanel Chrome extension
-#   gem 'meta_request', '0.2.4'
-# end
+#   gem 'bullet', '4.6.0' # probably don't need due to default eagerloading
+  # Debugging information
+  gem 'rails-footnotes', '3.7.9'
+  # Better error pages
+  gem 'better_errors', '0.8.0'
+  gem 'binding_of_caller', '0.7.1'
+  # Gem for RailsPanel Chrome extension
+  gem 'meta_request', '0.2.5'
+end
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
-#   # for autotesting with rspec
-#   gem 'guard-rspec', '3.0.0'
+  # for autotesting with rspec
+  gem 'guard-rspec', '3.0.0'
   # Prettier RSpec output
   gem 'fuubar', '1.1.0'
 end
@@ -87,18 +84,17 @@ group :test do
 #   gem 'factory_girl_rails', '4.2.1'
 #   gem 'shoulda-matchers', '2.1.0'
 #   gem 'database_cleaner', , github: 'bmabey/database_cleaner'
-#   # speed up test server
-#   # gem 'spork', '0.9.2'
-#   gem 'spork-rails', github: 'railstutorial/spork-rails'
-#   # guard/spork integration
-#   # gem 'guard-spork', '1.5.0'
-#   # Helps in debugging tests by being able to launch browser
-#   gem 'launchy', '2.3.0'
-#   # # Mac-dependent gems
-#   # gem 'rb-fsevent', '0.9.3', require: false
-#   # # Growl notifications
-#   # gem 'growl', '1.0.3'
-#   # Code coverage reports
-#   gem 'simplecov', '0.7.1', require: false
-#   gem 'coveralls', '0.6.7', require: false
+  # Speed up test server
+  gem 'spork-rails', github: 'railstutorial/spork-rails'
+  # guard/spork integration
+  gem 'guard-spork', '1.5.0'
+  # Helps in debugging tests by being able to launch browser
+  gem 'launchy', '2.3.0'
+  # Mac-dependent gems
+  gem 'rb-fsevent', '0.9.3', require: false
+  # Growl notifications
+  gem 'growl', '1.0.3'
+  # Code coverage reports
+  gem 'simplecov', '0.7.1', require: false
+  gem 'coveralls', '0.6.7', require: false
 end

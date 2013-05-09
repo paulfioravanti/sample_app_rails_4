@@ -10,9 +10,9 @@
     = render 'layouts/i18n_js'
   %body{ class: "#{controller_name}-controller #{action_name}-action" }
     = render 'layouts/header',
-         controller: @redirect_controller,
-         action: @redirect_action,
-         page: @page_number
+             controller: @redirect_controller,
+             action: @redirect_action,
+             page: @page_number
     .container
       = render 'layouts/messages'
       = yield

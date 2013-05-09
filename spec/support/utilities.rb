@@ -3,10 +3,11 @@ include ApplicationHelper
 
 def fill_in_fields(user, new_name = nil, new_email = nil)
   scope = 'activerecord.attributes.user'
+  password = user.password
   fill_in t(:name, scope: scope),     with: new_name || user.name
   fill_in t(:email, scope: scope),    with: new_email || user.email
-  fill_in t(:password, scope: scope), with: user.password
-  fill_in t(:password_confirmation, scope: scope), with: user.password
+  fill_in t(:password, scope: scope), with: password
+  fill_in t(:password_confirmation, scope: scope), with: password
 end
 
 def sign_in_through_ui(user)

@@ -18,3 +18,14 @@ SampleAppRails4::Application.routes.draw do
   # handles /anything|valid-path-but-no-locale
   get '/*path', to: redirect("/#{I18n.default_locale}/%{path}")
 end
+#== Route Map
+# Generated on 08 May 2013 18:45
+#
+#        help GET /:locale/help(.:format)    static_pages#help {:locale=>/en|it|ja/}
+#       about GET /:locale/about(.:format)   static_pages#about {:locale=>/en|it|ja/}
+#     contact GET /:locale/contact(.:format) static_pages#contact {:locale=>/en|it|ja/}
+# locale_root GET /:locale(.:format)         static_pages#home {:locale=>/en|it|ja/}
+#             GET /:locale/*path(.:format)   redirect(301) {:locale=>/en|it|ja/}
+#        root GET /                          redirect(301, /en)
+#             GET /*locale/*path(.:format)   redirect(301, /en/%{path})
+#             GET /*path(.:format)           redirect(301, /en/%{path})
