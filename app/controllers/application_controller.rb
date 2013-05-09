@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  include Localizeable
+  include Localizeable, Authenticatable
 
   protect_from_forgery with: :exception
 
@@ -10,17 +10,4 @@ class ApplicationController < ActionController::Base
   def url_options
     { locale: I18n.locale }.merge(super)
   end
-
-  private
-
-    def signed_in?
-      !current_user.nil?
-    end
-    helper_method :signed_in?
-
-    def current_user
-      nil
-      # @current_user ||= User.find_by_remember_token(cookies[:remember_token])
-    end
-    helper_method :current_user
 end
