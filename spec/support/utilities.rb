@@ -1,7 +1,26 @@
 # Allow for methods in ApplicationHelper to be tested
 include ApplicationHelper
 
-def fill_in_fields(user, new_name = nil, new_email = nil)
+def all_locales(&block)
+  I18n.available_locales.each do |locale|
+    yield(locale)
+  end
+end
+
+def all_locales_to_all_other_locales(&block)
+  I18n.available_locales.each do |locale|
+    I18n.available_locales.each do |target_locale|
+      next if locale == target_locale
+      yield(locale, target_locale)
+    end
+  end
+end
+
+def current_locale
+  I18n.locale
+end
+
+def fill_in_fields_with(user, new_name = nil, new_email = nil)
   scope = 'activerecord.attributes.user'
   password = user.password
   fill_in t(:name, scope: scope),     with: new_name || user.name
@@ -10,7 +29,7 @@ def fill_in_fields(user, new_name = nil, new_email = nil)
   fill_in t(:password_confirmation, scope: scope), with: password
 end
 
-def sign_in_through_ui(user)
+def sign_in_through_user_interface(user)
   scope = 'sessions.new'
   fill_in t(:email, scope: scope),    with: user.email
   fill_in t(:password, scope: scope), with: user.password
@@ -42,10 +61,4 @@ def locale_labels
     { label: t(:it, scope: scope), locale: 'it' },
     { label: t(:ja, scope: scope), locale: 'ja' }
   ]
-end
-
-RSpec::Matchers::define :have_alert_message do |type, message|
-  match do |page|
-    page.has_selector?("div.alert.alert-#{type}", text: message)
-  end
 end

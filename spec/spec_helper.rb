@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'spork'
+require 'rspec/autorun'
 
 # Only run Simplecov when not using Spork
 # Stop it and run rspec to get coverage
@@ -16,13 +17,7 @@ Spork.prefork do
   ENV["RAILS_ENV"] ||= 'test'
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'
-  require 'rspec/autorun'
-  # require 'capybara/rails'
-  # require 'capybara/rspec'
-
-  # Requires supporting ruby files with custom matchers and macros, etc,
-  # in spec/support/ and its subdirectories.
-  Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+  # require 'rspec/autorun'
 
   # Checks for pending migrations before tests are run.
   # If you are not using ActiveRecord, you can remove this line.
@@ -47,20 +42,35 @@ Spork.prefork do
 
     # config.include Capybara::DSL
 
-    # config.include FactoryGirl::Syntax::Methods
+    config.include FactoryGirl::Syntax::Methods
+    config.include CustomMatchers
 
     # config.expect_with :rspec do |c|
     #   c.syntax = :expect
     # end
+
+    config.before :suite do
+      DatabaseCleaner.strategy = :transaction
+      DatabaseCleaner.clean_with(:truncation)
+    end
+
+    config.before do
+      DatabaseCleaner.start
+    end
+
+    config.after do
+      DatabaseCleaner.clean
+    end
   end
 end
 
 Spork.each_run do
+  # Requires supporting ruby files with custom matchers and macros, etc,
+  # in spec/support/ and its subdirectories.
+  Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
   # Allow the following changes to be reflected without restarting Spork:
   # i18n strings
   I18n.backend.reload!
-  # spec/support files
-  Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
   # Factories
-  # FactoryGirl.reload
+  FactoryGirl.reload
 end

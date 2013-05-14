@@ -1,0 +1,15 @@
+- provide(:title, @user.name)
+.row
+  %aside.span4
+    %section
+      %h1
+        = gravatar_for @user
+        = @user.name
+    %section= render 'shared/stats', user: @user
+  .span8
+    = render 'follow_form', user: @user if signed_in?
+    - if @user.microposts.any?
+      %h3= t('.microposts', count: @user.microposts.count)
+      %ol.microposts
+        = render @microposts
+      = will_paginate @microposts

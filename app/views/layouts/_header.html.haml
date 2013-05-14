@@ -12,17 +12,17 @@
             = link_to help_path do
               %i.icon-question-sign
               = t('.help')
-          / - if signed_in?
-          /   %li
-          /     = link_to users_path do
-          /       %i.icon-user
-          /       = t('.users')
-          /   = render 'layouts/account_dropdown'
-          / - else
-          /   %li
-          /     = link_to signin_path do
-          /       %i.icon-signin
-          /       = t('.sign_in')
+          - if signed_in?
+            %li
+              = link_to users_path do
+                %i.icon-user
+                = t('.users')
+            = render 'layouts/account_dropdown'
+          - else
+            %li
+              = link_to signin_path do
+                %i.icon-signin
+                = t('.sign_in')
           = render 'layouts/locale_selector',
                     controller: controller,
                     action: action,
