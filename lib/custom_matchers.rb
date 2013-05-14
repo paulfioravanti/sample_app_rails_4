@@ -41,9 +41,9 @@ module CustomMatchers
     end
   end
 
-  matcher :contain_micropost do |micropost|
+  matcher :display do |text|
     match do |page|
-      page.has_selector?('span', text: micropost)
+      page.has_selector?('span', text: text)
     end
   end
 

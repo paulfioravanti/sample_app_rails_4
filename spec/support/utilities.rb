@@ -9,6 +9,7 @@ end
 
 def all_locales_to_all_other_locales(&block)
   I18n.available_locales.each do |locale|
+    I18n.locale = locale
     I18n.available_locales.each do |target_locale|
       next if locale == target_locale
       yield(locale, target_locale)
