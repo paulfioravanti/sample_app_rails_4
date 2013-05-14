@@ -25,7 +25,6 @@ shared_context "user index pagination" do |locale|
   given(:next_page)               { t('will_paginate.next_label') }
   given(:first_page_of_users)     { User.paginate(page: 1) }
   given(:second_page_of_users)    { User.paginate(page: 2) }
-  given(:users_index_second_page) { users_path(locale, page: 2) }
 end
 
 shared_context "delete links" do |locale|

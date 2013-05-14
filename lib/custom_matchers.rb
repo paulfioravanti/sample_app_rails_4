@@ -40,4 +40,18 @@ module CustomMatchers
       end
     end
   end
+
+  matcher :contain_micropost do |micropost|
+    match do |page|
+      page.has_selector?('span', text: micropost)
+    end
+  end
+
+  matcher :contain_microposts do |microposts|
+    microposts[0..2].each do |micropost|
+      match do |page|
+        page.has_content?(micropost.content)
+      end
+    end
+  end
 end

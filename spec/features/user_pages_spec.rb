@@ -48,7 +48,7 @@ all_locales do |locale|
     end
 
     scenario "viewing the second page of users index" do
-      visit users_index_second_page
+      click_link next_page
       expect(page).to display_user_profile_links_for(second_page_of_users)
       expect(page).to_not display_user_profile_links_for(first_page_of_users)
     end
