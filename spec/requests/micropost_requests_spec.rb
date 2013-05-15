@@ -1,38 +1,23 @@
 require 'spec_helper'
 
-describe "Micropost Requests" do
+all_locales do |locale|
 
-  subject { response }
+  describe "micropost destruction" do
+    let(:user) { create(:user) }
+    let(:other_user) { create(:user) }
+    let(:other_micropost) { create(:micropost, user: other_user) }
+    let(:deleting_other_micropost) do
+      -> { delete micropost_path(locale, other_micropost) }
+    end
+    let(:translations) { Micropost.translation_class }
 
-  let(:user) { create(:user) }
+    before { sign_in_via_request(locale, user) }
 
-  I18n.available_locales.each do |locale|
-
-    describe "micropost destruction" do
-      before { create(:micropost_with_translations, user: user) }
-
-      context "as an incorrect user" do
-        let!(:other_micropost) { create(:micropost, user: create(:user)) }
-        let(:translations) { Micropost.translation_class }
-        let(:delete_other_micropost)  do
-          delete micropost_path(locale, other_micropost)
-        end
-
-        before do
-          sign_in_via_request(locale, user)
-          delete_other_micropost
-        end
-
-        describe "behaviour" do
-          it { should redirect_to(locale_root_url(locale)) }
-        end
-
-        describe "result" do
-          subject { -> { delete_other_micropost } }
-          it { should_not change(Micropost, :count) }
-          it { should_not change(translations, :count) }
-        end
-      end
+    it "redirects on DELETE Micropost#destroy if not own micropost" do
+      delete micropost_path(locale, other_micropost)
+      expect(response).to redirect_to(locale_root_url)
+      expect(deleting_other_micropost).to_not change(Micropost, :count)
+      expect(deleting_other_micropost).to_not change(translations, :count)
     end
   end
 end
