@@ -26,6 +26,8 @@ shared_context "locale validation errors" do |locale, target_locale|
   given(:post_button)          { t('shared.micropost_form.post') }
   given(:target_language)      { t("layouts.locale_selector.#{target_locale}") }
   given(:sign_in_page)         { signin_path(locale) }
+  given(:sign_in_page_title)   { t('sessions.new.sign_in') }
+  given(:sign_in)              { t('sessions.new.sign_in') }
   given(:sign_up_page)         { signup_path(locale) }
   given(:sign_up_page_title)   { t('users.new.sign_up') }
   given(:create_account)       { t('users.new.create_account') }

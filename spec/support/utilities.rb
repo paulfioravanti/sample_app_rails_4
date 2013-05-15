@@ -30,14 +30,15 @@ def fill_in_fields_with(user, new_name = nil, new_email = nil)
   fill_in t(:password_confirmation, scope: scope), with: password
 end
 
-def sign_in_through_user_interface(user)
+def sign_in_through_user_interface(user, locale)
+  visit signin_path(locale) unless current_path == signin_path(locale)
   scope = 'sessions.new'
   fill_in t(:email, scope: scope),    with: user.email
   fill_in t(:password, scope: scope), with: user.password
   click_button t(:sign_in, scope: scope)
 end
 
-def sign_in_request(locale, user)
+def sign_in_via_request(locale, user)
   post session_path(locale, email: user.email, password: user.password)
   cookies[:remember_token] = user.remember_token
 end

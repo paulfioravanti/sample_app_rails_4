@@ -32,7 +32,7 @@ SampleAppRails4::Application.routes.draw do
   get '/*path', to: redirect("/#{I18n.default_locale}/%{path}")
 end
 #== Route Map
-# Generated on 09 May 2013 16:51
+# Generated on 15 May 2013 12:41
 #
 # following_user GET    /:locale/users/:id/following(.:format) users#following {:locale=>/en|it|ja/}
 # followers_user GET    /:locale/users/:id/followers(.:format) users#followers {:locale=>/en|it|ja/}
@@ -57,6 +57,8 @@ end
 #        contact GET    /:locale/contact(.:format)             static_pages#contact {:locale=>/en|it|ja/}
 #    locale_root GET    /:locale(.:format)                     static_pages#home {:locale=>/en|it|ja/}
 #                GET    /:locale/*path(.:format)               redirect(301) {:locale=>/en|it|ja/}
+#  relationships POST   /relationships(.:format)               relationships#create
+#   relationship DELETE /relationships/:id(.:format)           relationships#destroy
 #           root GET    /                                      redirect(301, /en)
 #                GET    /*locale/*path(.:format)               redirect(301, /en/%{path})
 #                GET    /*path(.:format)                       redirect(301, /en/%{path})

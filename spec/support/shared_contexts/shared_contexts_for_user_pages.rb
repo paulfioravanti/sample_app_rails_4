@@ -37,12 +37,6 @@ shared_context "delete links" do |locale|
     create_list(:user, 2)
     visit users_path(locale)
   end
-
-  def sign_in_admin(locale)
-    visit signin_path(locale)
-    sign_in_through_user_interface(admin)
-    visit users_path(locale)
-  end
 end
 
 shared_context "profile page" do |locale|

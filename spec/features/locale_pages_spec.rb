@@ -31,8 +31,7 @@ all_locales_to_all_other_locales do |locale, target_locale|
     include_context "locale validation errors", locale, target_locale
 
     scenario "when failing to create a micropost" do
-      visit sign_in_page
-      sign_in_through_user_interface user
+      sign_in_through_user_interface(user, locale)
       visit home_page
       click_button post_button
       click_link target_language
@@ -40,8 +39,7 @@ all_locales_to_all_other_locales do |locale, target_locale|
     end
 
     scenario "when failing to update a user" do
-      visit sign_in_page
-      sign_in_through_user_interface user
+      sign_in_through_user_interface(user, locale)
       visit edit_user_page
       click_button save_changes
       click_link target_language
@@ -53,6 +51,13 @@ all_locales_to_all_other_locales do |locale, target_locale|
       click_button create_account
       click_link target_language
       expect(page).to have_title sign_up_page_title
+    end
+
+    scenario "when failing to sign in" do
+      visit sign_in_page
+      click_button sign_in
+      click_link target_language
+      expect(page).to have_title sign_in_page_title
     end
   end
 end
