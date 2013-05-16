@@ -43,7 +43,7 @@ updateCountdown = ->
 
 $ ->
   if $('body').hasClass('static_pages-controller home-action')
-    $(".countdown").text I18n.t('shared.micropost_contentropost_form.characters_remaining.other',
+    $(".countdown").text I18n.t('shared.micropost_form.characters_remaining.other',
                                 count: 140)
     $("#micropost_content").on("change keyup keydown keypress paste drop",
                                updateCountdown)
@@ -54,3 +54,5 @@ $ ->
           $('.pagination').text I18n.t('shared.endless_scroll.fetching_microposts')
           $.getScript(url)
       $(window).scroll()
+    # $('.best_in_place').best_in_place().bind "ajax:success", ->
+    #   $(this).closest("li").effect "highlight", {}, 2000
