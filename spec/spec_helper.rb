@@ -38,7 +38,7 @@ Spork.prefork do
     # order dependency and want to debug it, you can fix the order by providing
     # the seed, which is printed after each run.
     #     --seed 1234
-    # config.order = "random" # turned off due to issues with locales
+    # config.order = "random" # turned off due to occasional issues with locales
 
     config.include FactoryGirl::Syntax::Methods
     config.include CustomMatchers
