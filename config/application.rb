@@ -19,6 +19,8 @@ module SampleAppRails4
     # Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
 
+    # Due to Rails preventing images from being compiled in vendor and lib
+    # This config specific to bootstrap-sass gem
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
     # Load all locale files under the config/locales directory
