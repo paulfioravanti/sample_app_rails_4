@@ -3,7 +3,7 @@ require 'spork'
 require 'rspec/autorun'
 
 # Only run Simplecov when not using Spork
-# Stop it and run rspec to get coverage
+# To get coverage, stop spork and run rspec
 unless ENV['DRB']
   require 'simplecov'
   SimpleCov.start 'rails'
@@ -40,14 +40,12 @@ Spork.prefork do
     #     --seed 1234
     # config.order = "random" # turned off due to issues with locales
 
-    # config.include Capybara::DSL
-
     config.include FactoryGirl::Syntax::Methods
     config.include CustomMatchers
 
-    # config.expect_with :rspec do |c|
-    #   c.syntax = :expect
-    # end
+    config.expect_with :rspec do |c|
+      c.syntax = :expect
+    end
 
     config.before :suite do
       DatabaseCleaner.strategy = :transaction

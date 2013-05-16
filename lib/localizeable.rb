@@ -1,7 +1,6 @@
 module Localizeable
   def self.included(base)
     base.send :before_action, :set_locale, :locale_redirect
-    base.send :helper_method, :locale_language_labels
   end
 
   def set_locale
@@ -71,13 +70,5 @@ module Localizeable
     options[:action] = @redirect_action
     options[:page] = @page_number if @page_number
     redirect_to options
-  end
-
-  def locale_language_labels
-    [
-      { label: t('layouts.locale_selector.en'), locale: 'en' },
-      { label: t('layouts.locale_selector.it'), locale: 'it' },
-      { label: t('layouts.locale_selector.ja'), locale: 'ja' }
-    ]
   end
 end
