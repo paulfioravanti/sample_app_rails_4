@@ -59,7 +59,7 @@ Or, do it manually:
     $ heroku config:set DB_USER={{YOUR_DB_USER}}
     $ heroku config:set DB_PASSWORD={{YOUR_DB_PASSWORD}}
 
-Let Heroku compile assets to avoid doing it locally (optional, as [the functionality is experimental](https://devcenter.heroku.com/articles/labs-user-env-compile):
+Let Heroku compile assets to avoid doing it locally (optional, as [the functionality is experimental](https://devcenter.heroku.com/articles/labs-user-env-compile)):
 
     $ heroku labs:enable user-env-compile -a {{YOUR_HEROKU_APP_NAME}}
 
@@ -100,7 +100,7 @@ I haven't yet been able to get the following functionality that worked in Rails 
 
 - Micropost character countdown based on Twitter's
 - The endless scroll to pages with paginated lists of users or microposts, as shown in [Railscast #114 Endless Page (revised)](http://railscasts.com/episodes/114-endless-page-revised)
-- It seems [rails-timeago](https://github.com/jgraichen/rails-timeago) currently is not compatible with Rails 4, so time calculation for microposts have reverted back to the default `time_ago_in_words`)
+- It seems [rails-timeago](https://github.com/jgraichen/rails-timeago) currently is not compatible with Rails 4, so time calculation for microposts have reverted back to the default `time_ago_in_words`
 
 ## Modifications:
 
