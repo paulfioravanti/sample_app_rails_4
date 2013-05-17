@@ -69,21 +69,21 @@ If you're using Travis for continuous integration testing, do the following (wit
 Create encrypted travis variables for your Heroku API key and Repo name:
 
     $ gem install travis
-    $ travis encrypt your_username/your_repo HEROKU_API_KEY={{YOUR_HEROKU_API_KEY}}
-    $ travis encrypt HEROKU_GIT_URL={{YOUR_HEROKU_GIT_URL}} # eg git@heroku.com:my_app.git
-    $ travis encrypt DB_NAME={{YOUR_DB_NAME_UNDER_TEST}} # eg: my_app_test
-    $ travis encrypt DB_USER={{YOUR_DB_USER}}
-    $ travis encrypt DB_PASSWORD={{YOUR_DB_PASSWORD}}
+    $ travis encrypt your_username/your_repo HEROKU_API_KEY={{YOUR_HEROKU_API_KEY}} --add
+    $ travis encrypt HEROKU_GIT_URL={{YOUR_HEROKU_GIT_URL}} # eg git@heroku.com:my_app.git --add
+    $ travis encrypt DB_NAME={{YOUR_DB_NAME_UNDER_TEST}} --add # eg: my_app_test
+    $ travis encrypt DB_USER={{YOUR_DB_USER}} --add
+    $ travis encrypt DB_PASSWORD={{YOUR_DB_PASSWORD}} --add
 
-Then add them to **.travis.yml**
+Or, without the `--add` flag, you can add them manually to **.travis.yml**
 
     env:
       global:
-        - secure: {{YOUR_ENCRYPTED_HEROKU_API_KEY}}
-        - secure: {{YOUR_ENCRYPTED_HEROKU_GIT_URL}}
-        - secure: {{YOUR_ENCRYPTED_DB_NAME_UNDER_TEST}}
-        - secure: {{YOUR_ENCRYPTED_DB_USER}}
-        - secure: {{YOUR_ENCRYPTED_DB_PASSWORD}}
+      - secure: {{YOUR_ENCRYPTED_HEROKU_API_KEY}}
+      - secure: {{YOUR_ENCRYPTED_HEROKU_GIT_URL}}
+      - secure: {{YOUR_ENCRYPTED_DB_NAME_UNDER_TEST}}
+      - secure: {{YOUR_ENCRYPTED_DB_USER}}
+      - secure: {{YOUR_ENCRYPTED_DB_PASSWORD}}
 
 Finally, configure the databases:
 
