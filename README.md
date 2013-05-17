@@ -49,7 +49,7 @@ Copy the resulting string into the `SECRET_KEY_BASE` entry in **config/applicati
 
 After creating the Heroku repo, generate production environment variables automatically using [Figaro](https://github.com/laserlemon/figaro):
 
-    $ rake figaro:heroku
+    $ rake figaro:heroku RAILS_ENV=production
 
 Or, do it manually:
 
@@ -61,6 +61,29 @@ Or, do it manually:
 Let Heroku compile assets to avoid doing it locally (optional, as [the functionality is experimental](https://devcenter.heroku.com/articles/labs-user-env-compile):
 
     $ heroku labs:enable user-env-compile -a {{YOUR_HEROKU_APP_NAME}}
+
+**Continuous Integration/Deployment with Travis CI**
+
+If you're using Travis for continuous integration testing, do the following (without the `{{ }}`):
+
+Create encrypted travis variables for your Heroku API key and Repo name:
+
+    $ gem install travis
+    $ travis encrypt your_username/your_repo HEROKU_API_KEY={{YOUR_HEROKU_API_KEY}}
+    $ travis encrypt HEROKU_GIT_URL={{YOUR_HEROKU_GIT_URL}} # eg git@heroku.com:my_app.git
+    $ travis encrypt DB_NAME={{YOUR_DB_NAME_UNDER_TEST}} # eg: sample_app_test
+    $ travis encrypt DB_USER={{YOUR_DB_USER}}
+    $ travis encrypt DB_PASSWORD={{YOUR_DB_PASSWORD}}
+
+Then add them to **.travis.yml**
+
+    env:
+      global:
+        - secure: {{YOUR_ENCRYPTED_HEROKU_API_KEY}}
+        - secure: {{YOUR_ENCRYPTED_HEROKU_GIT_URL}}
+        - secure: {{YOUR_ENCRYPTED_DB_NAME_UNDER_TEST}}
+        - secure: {{YOUR_ENCRYPTED_DB_USER}}
+        - secure: {{YOUR_ENCRYPTED_DB_PASSWORD}}
 
 - - -
 
