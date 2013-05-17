@@ -85,6 +85,12 @@ Then add them to **.travis.yml**
         - secure: {{YOUR_ENCRYPTED_DB_USER}}
         - secure: {{YOUR_ENCRYPTED_DB_PASSWORD}}
 
+Finally, configure the databases:
+
+    $ bundle exec rake db:migrate
+    $ bundle exec rake db:seed
+    $ bundle exec rake db:test:prepare RAILS_ENV=test
+
 - - -
 
 ## Issues
