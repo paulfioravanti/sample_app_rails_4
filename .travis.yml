@@ -5,7 +5,7 @@ env:
   global:
     # These variables need to be changed for personalized deployment
     # See README for details
-    - secure: "pSOM8ayDDvCCbBLwsR44r++6EjjEaRAMs0v/JZ8qpMiI1LEsra8SU3ejBdqY\nUnz5cDS1jebPCAsYP0ItHN8OvpmFymnZRCJqCd72sR6RgS0yGrKUYFAhU7CJ\ntUluZWj+NOeet/lM7eyJjwnhubXgpdsWZQ3Rhda2f9h30uJ1QYY="
+    # - secure: "H8oyZwHq/w9CrA+51fRx3JqP9MYM8JW7wHSzmcdyUPZdObvdiTHQDIOgm9wa\ntuWow++L94YBUvRYYLwyF1ajFUiI6i0Tj23ydlqOFzjahhlEzUwcYvHkVY0T\n0V8ozF1NsN2kKDIkCGnN+ynfj/4Lt1V7yKbEPZEI4piuzIRkapk="
     - secure: "Dchuxf7DH6+FMdpN3QagpHPeYFowOqxvOLwPyhiFehHFbiDjHQUagn8G0H/o\ngCtnDPNCwsVEJJ5/dkDlYn7j62rAA48C5fLQTx8Tajz+LEPQjkjDMTrs2Z5M\nNL7Z9mChE4t0nMBU2PLH2q+KUIBH/UBDSMF0d41evKTjXp/GDCo="
     - secure: "NvNzhFMenhN53MdDD8a8ZiOdRLTLk7mC/4HBgdodnDWqswfvOL16MAymaqUM\nmccrJJJj9bXFdtj1sYXZ176kJg45ErNvugZbHkOV/IkhFvIoE3qqjDIS7CVn\njQZJkbayQP7XoXNhmMuvWb2xzRJ9DXmA7tYhZIDcszWlS90tZ74="
     - secure: "OugPeE1gjjdxPH8F2mGaEcJbTAHXnz7sU3W8eadwtU4M4QeqGqzJcrPZ4YIi\nRhwc46XmU21rZb3sJozJxNBlVP1Zl5u0yxizXS3zH62ZaDbidG4rOZa/7TBs\nO4/6JOtIkqb/E92BUcU2Oz7+xPYMhdm8YKVHlaLb8+YvbSpGHLQ="

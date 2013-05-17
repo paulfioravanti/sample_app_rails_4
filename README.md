@@ -54,7 +54,7 @@ After creating the Heroku repo, generate production environment variables automa
 Or, do it manually:
 
     $ heroku config:set SECRET_TOKEN={{YOUR_SECRET_TOKEN}}
-    $ heroku config:set DB_NAME={{YOUR_DB_NAME_UNDER_PRODUCTION}} # eg: sample_app_production
+    $ heroku config:set DB_NAME={{YOUR_DB_NAME_UNDER_PRODUCTION}} # eg: my_app_production
     $ heroku config:set DB_USER={{YOUR_DB_USER}}
     $ heroku config:set DB_PASSWORD={{YOUR_DB_PASSWORD}}
 
@@ -71,7 +71,7 @@ Create encrypted travis variables for your Heroku API key and Repo name:
     $ gem install travis
     $ travis encrypt your_username/your_repo HEROKU_API_KEY={{YOUR_HEROKU_API_KEY}}
     $ travis encrypt HEROKU_GIT_URL={{YOUR_HEROKU_GIT_URL}} # eg git@heroku.com:my_app.git
-    $ travis encrypt DB_NAME={{YOUR_DB_NAME_UNDER_TEST}} # eg: sample_app_test
+    $ travis encrypt DB_NAME={{YOUR_DB_NAME_UNDER_TEST}} # eg: my_app_test
     $ travis encrypt DB_USER={{YOUR_DB_USER}}
     $ travis encrypt DB_PASSWORD={{YOUR_DB_PASSWORD}}
 
