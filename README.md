@@ -2,29 +2,33 @@
 
 This is the Rails 4 version of sample application for the 
 [*Ruby on Rails Tutorial: Learn Rails by Example*](http://railstutorial.org/)
-by [Michael Hartl](http://michaelhartl.com) (plus some [modifications](#modifications)).  You can find my Rails 3 version [here](https://github.com/paulfioravanti/sample_app)
+by [Michael Hartl](http://michaelhartl.com) (plus some [modifications](#modifications)).
+
+([Rails 3.2 version here](https://github.com/paulfioravanti/sample_app))
+
+- This code is currently deployed [here](https://pf-sampleapp-rails4.herokuapp.com) using [Heroku](http://www.heroku.com/)
 
 ### Cloning Locally
 
     $ cd /tmp
-    $ git clone git@github.com:paulfioravanti/sample_app.git
-    $ cd sample_app
+    $ git clone git@github.com:paulfioravanti/sample_app_rails_4.git
+    $ cd sample_app_rails_4
     $ bundle install
 
 ### Environment Configuration
 
+**Secret information configuration**
+
     $ cp config/application.example.yml config/application.yml
 
-**Inside Rails App**
-
-Generate a secret token:
+Generate a secret key:
 
     $ rake secret
 
-Copy the resulting string into the `SECRET_TOKEN` entry in **config/application.yml**, along with your database information:
+Copy the resulting string into the `SECRET_KEY_BASE` entry in **config/application.yml**, along with your database information for all environments:
 
     # App keys
-    SECRET_TOKEN: # your rake secret generated token
+    SECRET_KEY_BASE: # your rake secret generated token
 
     development:
       DB_NAME: # your dev db name here
@@ -41,16 +45,32 @@ Copy the resulting string into the `SECRET_TOKEN` entry in **config/application.
       DB_USER: # your prod db username here
       DB_PASSWORD: # your prod db password here
 
+**Deploying with Heroku**
+
+After creating the Heroku repo, generate production environment variables automatically using [Figaro](https://github.com/laserlemon/figaro):
+
+    $ rake figaro:heroku
+
+Or, do it manually:
+
+    $ heroku config:set SECRET_TOKEN={{YOUR_SECRET_TOKEN}}
+    $ heroku config:set DB_NAME={{YOUR_DB_NAME_UNDER_PRODUCTION}} # eg: sample_app_production
+    $ heroku config:set DB_USER={{YOUR_DB_USER}}
+    $ heroku config:set DB_PASSWORD={{YOUR_DB_PASSWORD}}
+
+Let Heroku compile assets to avoid doing it locally (optional, as [the functionality is experimental](https://devcenter.heroku.com/articles/labs-user-env-compile):
+
+    $ heroku labs:enable user-env-compile -a {{YOUR_HEROKU_APP_NAME}}
+
 - - -
 
-### Issues
+## Issues
 
-The following functionality that worked in Rails 3 currently does not work in Rails 4 due to issues with Turbolinks/jQuery:
+I haven't yet been able to get the following functionality that worked in Rails 3 to work in Rails 4:
 
 - Micropost character countdown based on Twitter's
 - The endless scroll to pages with paginated lists of users or microposts, as shown in [Railscast #114 Endless Page (revised)](http://railscasts.com/episodes/114-endless-page-revised)
 - It seems [rails-timeago](https://github.com/jgraichen/rails-timeago) currently is not compatible with Rails 4, so time calculation for microposts have reverted back to the default `time_ago_in_words`)
-
 
 ## Modifications:
 
