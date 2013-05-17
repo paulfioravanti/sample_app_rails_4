@@ -1,36 +1,44 @@
+---
 language: ruby
 rvm:
-  - 2.0.0
+- 2.0.0
 env:
-  global:
-    - secure: "UF79cO8pBNA98DgpqB4/rMcA1xbxcBXDlcuobKKrTqvXg0l2RbmerUwCmce0\nfDTvTiiHcOTz0Q97TGFUbZ0FytZCpIjW0qW+bQG00do6WgeSux5N8wQTz3nA\n2Viy20f8PeZh/SVYOmgq76T6fvGpd+5gYwFfpkpFMdspd92UAqo="
-    - secure: "Dchuxf7DH6+FMdpN3QagpHPeYFowOqxvOLwPyhiFehHFbiDjHQUagn8G0H/o\ngCtnDPNCwsVEJJ5/dkDlYn7j62rAA48C5fLQTx8Tajz+LEPQjkjDMTrs2Z5M\nNL7Z9mChE4t0nMBU2PLH2q+KUIBH/UBDSMF0d41evKTjXp/GDCo="
-    - secure: "NvNzhFMenhN53MdDD8a8ZiOdRLTLk7mC/4HBgdodnDWqswfvOL16MAymaqUM\nmccrJJJj9bXFdtj1sYXZ176kJg45ErNvugZbHkOV/IkhFvIoE3qqjDIS7CVn\njQZJkbayQP7XoXNhmMuvWb2xzRJ9DXmA7tYhZIDcszWlS90tZ74="
-    - secure: "OugPeE1gjjdxPH8F2mGaEcJbTAHXnz7sU3W8eadwtU4M4QeqGqzJcrPZ4YIi\nRhwc46XmU21rZb3sJozJxNBlVP1Zl5u0yxizXS3zH62ZaDbidG4rOZa/7TBs\nO4/6JOtIkqb/E92BUcU2Oz7+xPYMhdm8YKVHlaLb8+YvbSpGHLQ="
-    - secure: "UPx62t5VCg4czyFpOW1nrKFdeM+0azNtvozazcT2zIu2c1QMXXQqTefx8KEV\nzFzRBSwqimHLhEKlm8dGjMWx+/nTgwj6VCwEml65lLqI//U8NJShe31ToApm\nqmYmhuHHynpXo2AHYUJMfLgnGz6nbWPOLWR9T6jwXOr8+iJz0Z0="
   matrix:
-    - DB: postgresql
+  - DB: postgresql
+  global:
+  - secure: |-
+      Xgd562z6Tl5cYewlSoX2jOdv+3jxdN2ihJ1kBVBT3fbZ2wmVyibW/dZa77e7
+      f7GPXkNMjZRRoVOaNU7vr21HBNPB+ofNaZ7dJkqorXAFHS8YKKTwDqsYpMSN
+      QpE6tf3GxswukrYgnzrsO1sF/Vh4CtSJBiyIt0PdM9bmBic2Lz0=
+  - secure: |-
+      UE8cZHDN1ckKC82vNPzd/Jwx4T185biRX/0aXgjyePLyKqoWZrGxSOKiqsdO
+      RBOUNjNEYx0StJy0vdeFxmUe0jKLe4owNM+OoDMKfcbnyuH5aOb4GALyPC4P
+      yPRtka30CoS4HQmiaRNq1a644U5iPHnCxUmPpbc1LtYRg4hxIF4=
+  - secure: |-
+      fD2O/w2tyJljR7SSBYjbDPOeRZFg58oPoD5FxYfW74CD/j1foK4ZB+Ovc0Lr
+      gEAYrOPkK+FKgHnKJgg27qse2LE3IQi5MCKkvIkGToG+705NkcQu6RoS3YfU
+      HVI+tZLcu4zat7L/xZYEwE/V/JekCyhjy6QTtDiqNX/yCk0pGXA=
+  - secure: |-
+      YTHn5tmeWgoyGQ6RGRRmC/GfYescEac72g4Zmd/fScu7tR4DgcwvrNdFOdm/
+      JUxYLTQDFJMFBNo4ziRyTpFN0poI8u3YYF+JWiGyXL9DivHeWeKKsZnVbKuz
+      bxtxmkjb3hdDrWFoPKCLXdYM9WY/b2MITVvtJRkBjb0ojg9xr4Y=
+  - secure: |-
+      Cl9ByU+EoOgMsWbKgf0HJkjezWkKPs4WovhOYkNYT41+TxEzqHUP+RMOoIsn
+      A0mhGf4k1EsLUjIltT4VFyN9bQIdleH+33OuC20/Q4dbfEnlbe3G0PMlqjdW
+      FjjKtmMDSQ/dCABpLUWH+nREhI2da0Po0VcZJq6geYQlcd+Wesk=
 bundler_args: --without development
 before_script:
-  - psql -c "create database $DB_NAME;" -U $DB_USER
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
+- psql -c "create database $DB_NAME;" -U $DB_USER
+- RAILS_ENV=test bundle exec rake db:migrate --trace
 script:
-  - bundle exec rspec --no-drb --format progress spec/
+- bundle exec rspec --no-drb --format progress spec/
 after_success:
-  # heroku labs:enable user-env-compile -a [app-name]
-  # enabled so no need to precompile assets before deploy
-  # - bundle exec rake assets:precompile
-  # - git add public/assets
-  # - git commit -m "Precompile assets"
-  - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-  - git remote add heroku $HEROKU_GIT_URL
-  # Turn off warnings about SSH keys:
-  - echo "Host heroku.com" >> ~/.ssh/config
-  - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
-  - echo "   CheckHostIP no" >> ~/.ssh/config
-  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
-  # Clear current Heroku SSH keys
-  - heroku keys:clear
-  # Add a new SSH key to Heroku
-  - yes | heroku keys:add
-  - yes | git push heroku master
+- wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+- git remote add heroku $HEROKU_GIT_URL
+- echo "Host heroku.com" >> ~/.ssh/config
+- echo "   StrictHostKeyChecking no" >> ~/.ssh/config
+- echo "   CheckHostIP no" >> ~/.ssh/config
+- echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
+- heroku keys:clear
+- yes | heroku keys:add
+- yes | git push heroku master
