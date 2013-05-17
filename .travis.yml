@@ -1,0 +1,38 @@
+language: ruby
+rvm:
+  - 2.0.0
+env:
+  global:
+    # These variables need to be changed for personalized deployment
+    # See README for details
+    - secure: "H8oyZwHq/w9CrA+51fRx3JqP9MYM8JW7wHSzmcdyUPZdObvdiTHQDIOgm9wa\ntuWow++L94YBUvRYYLwyF1ajFUiI6i0Tj23ydlqOFzjahhlEzUwcYvHkVY0T\n0V8ozF1NsN2kKDIkCGnN+ynfj/4Lt1V7yKbEPZEI4piuzIRkapk="
+    - secure: "Dchuxf7DH6+FMdpN3QagpHPeYFowOqxvOLwPyhiFehHFbiDjHQUagn8G0H/o\ngCtnDPNCwsVEJJ5/dkDlYn7j62rAA48C5fLQTx8Tajz+LEPQjkjDMTrs2Z5M\nNL7Z9mChE4t0nMBU2PLH2q+KUIBH/UBDSMF0d41evKTjXp/GDCo="
+    - secure: "NvNzhFMenhN53MdDD8a8ZiOdRLTLk7mC/4HBgdodnDWqswfvOL16MAymaqUM\nmccrJJJj9bXFdtj1sYXZ176kJg45ErNvugZbHkOV/IkhFvIoE3qqjDIS7CVn\njQZJkbayQP7XoXNhmMuvWb2xzRJ9DXmA7tYhZIDcszWlS90tZ74="
+    - secure: "OugPeE1gjjdxPH8F2mGaEcJbTAHXnz7sU3W8eadwtU4M4QeqGqzJcrPZ4YIi\nRhwc46XmU21rZb3sJozJxNBlVP1Zl5u0yxizXS3zH62ZaDbidG4rOZa/7TBs\nO4/6JOtIkqb/E92BUcU2Oz7+xPYMhdm8YKVHlaLb8+YvbSpGHLQ="
+    - secure: "UPx62t5VCg4czyFpOW1nrKFdeM+0azNtvozazcT2zIu2c1QMXXQqTefx8KEV\nzFzRBSwqimHLhEKlm8dGjMWx+/nTgwj6VCwEml65lLqI//U8NJShe31ToApm\nqmYmhuHHynpXo2AHYUJMfLgnGz6nbWPOLWR9T6jwXOr8+iJz0Z0="
+  matrix:
+    - DB: postgresql
+bundler_args: --without development
+before_script:
+  - psql -c "create database $DB_NAME;" -U $DB_USER
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+script:
+  - bundle exec rspec --no-drb --format progress spec/
+after_success:
+  # heroku labs:enable user-env-compile -a [app-name]
+  # enabled so no need to precompile assets before deploy
+  # - bundle exec rake assets:precompile
+  # - git add public/assets
+  # - git commit -m "Precompile assets"
+  - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+  - git remote add heroku $HEROKU_GIT_URL
+  # Turn off warnings about SSH keys:
+  - echo "Host heroku.com" >> ~/.ssh/config
+  - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
+  - echo "   CheckHostIP no" >> ~/.ssh/config
+  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
+  # Clear current Heroku SSH keys
+  - heroku keys:clear
+  # Add a new SSH key to Heroku
+  - yes | heroku keys:add
+  - yes | git push heroku master

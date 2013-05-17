@@ -1,11 +1,10 @@
 !!! 5
-%html
+%html{ lang: I18n.locale.to_s }
   %head
     %title= full_title yield(:title)
     = stylesheet_link_tag "application", media: "all",
       "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
-    / =# timeago_script_tag
     = csrf_meta_tags
     = render 'layouts/shim'
     = render 'layouts/i18n_js'
