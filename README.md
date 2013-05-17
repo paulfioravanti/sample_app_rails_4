@@ -1,4 +1,5 @@
 # Ruby on Rails Tutorial: sample application
+[![Build Status](https://secure.travis-ci.org/paulfioravanti/sample_app_rails_4.png)](http://travis-ci.org/paulfioravanti/sample_app_rails_4)
 
 This is the Rails 4 version of sample application for the 
 [*Ruby on Rails Tutorial: Learn Rails by Example*](http://railstutorial.org/)
