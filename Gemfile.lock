@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: git://github.com/presidentbeef/brakeman.git
-  revision: a1ed019be406b48a55f357c1490539dfa3785bd1
+  revision: d4e60b6d96c617bfb081b183362dc1d9ec585f89
   specs:
     brakeman (1.9.5)
       erubis (~> 2.6)
@@ -293,9 +293,9 @@ GEM
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
-    slim (1.3.8)
+    slim (1.3.9)
       temple (~> 0.6.3)
-      tilt (~> 1.3.3)
+      tilt (~> 1.3, >= 1.3.3)
     slop (3.4.5)
     spork (1.0.0rc3)
     sprockets (2.9.3)
@@ -312,7 +312,7 @@ GEM
     thor (0.18.1)
     thread_safe (0.1.0)
       atomic
-    tilt (1.3.7)
+    tilt (1.4.1)
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
