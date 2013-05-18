@@ -17,7 +17,7 @@ gem 'font-awesome-sass-rails', '3.0.2.2'
 # gem 'simple_form', '2.1.0'
 gem 'simple_form', github: 'plataformatec/simple_form'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '2.1.0'
+gem 'uglifier', '2.1.1'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.0.0'
 # Use jquery as the JavaScript library
