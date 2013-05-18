@@ -1,17 +1,7 @@
+require 'simplecov'
 require 'rubygems'
 require 'spork'
 require 'rspec/autorun'
-
-# Only run Simplecov when not using Spork
-# To get coverage, stop spork and run rspec
-unless ENV['DRB']
-  require 'simplecov'
-  SimpleCov.start 'rails'
-end
-if ENV['TRAVIS']
-  require 'coveralls'
-  Coveralls.wear! 'rails'
-end
 
 Spork.prefork do
   ENV["RAILS_ENV"] ||= 'test'
