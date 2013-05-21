@@ -60,8 +60,7 @@ group :development do
   # for annotating model files with their properties
   gem 'annotate', '2.5.0'
   # Security checking
-  # gem 'brakeman', github: 'presidentbeef/brakeman'
-    gem 'brakeman', '2.0.0'
+  gem 'brakeman', '2.0.0'
   # Code quality
   gem 'reek', '1.3.1'
   gem 'rails_best_practices', '1.13.5'
