@@ -14,6 +14,4 @@ if Rails.env.production? && ENV['SECRET_KEY_BASE'].blank?
 end
 
 SampleAppRails4::Application.config.secret_key_base =
-  ENV['SECRET_KEY_BASE'] ||
-    "81b305de405df746d39accd5090d4691f1b3bba64e3ab41b8b4e129f6bc79bb8a571685a1"\
-    "aea7787856c5e2217d48fbbae90bba758e1435ccb1c10b2d79f299b"
+  ENV['SECRET_KEY_BASE'] || 'x' * 30
