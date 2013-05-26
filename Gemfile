@@ -8,7 +8,7 @@ gem 'pg', '0.15.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.0.rc1'
 # Twitter frameworks to make nice UI design elements
-gem 'bootstrap-sass', '2.3.1.0'
+gem 'bootstrap-sass', '2.3.1.2'
 # will_paginate pagination for Bootstrap
 gem 'bootstrap-will_paginate', '0.0.9'
 # Font Awesome icons
@@ -69,10 +69,10 @@ group :development do
   # Debugging information
   gem 'rails-footnotes', '3.7.9'
   # Better error pages
-  gem 'better_errors', '0.8.0'
+  gem 'better_errors', '0.9.0'
   gem 'binding_of_caller', '0.7.1'
   # Gem for RailsPanel Chrome extension
-  gem 'meta_request', '0.2.5'
+  gem 'meta_request', '0.2.6'
 end
 
 group :development, :test do
