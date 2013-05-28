@@ -15,7 +15,7 @@ GIT
 
 GIT
   remote: git://github.com/plataformatec/simple_form.git
-  revision: 1da255ee39f7b03a6117c7d6b29a4530f34f57df
+  revision: d75963307f3a9aa7884cff8d5ad228f65e94d343
   specs:
     simple_form (3.0.0.rc)
       actionpack (>= 4.0.0.rc1, < 4.1)
@@ -197,7 +197,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     minitest (4.7.4)
-    multi_json (1.7.3)
+    multi_json (1.7.4)
     nokogiri (1.5.9)
     pg (0.15.1)
     polyglot (0.3.3)
