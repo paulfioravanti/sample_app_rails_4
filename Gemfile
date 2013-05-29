@@ -35,7 +35,7 @@ gem 'figaro', '0.6.4'
 # Substiture ERb for Haml
 gem 'haml-rails', '0.4.0'
 # Use of Markdown for static content in views
-gem 'rdiscount', '2.0.7.3'
+gem 'rdiscount', '2.1.6'
 # For JQuery timeago library
 ## Not currently working with Rails 4, revert to timeago_in_words
 # gem 'rails-timeago', '2.3.0'
@@ -78,7 +78,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '2.13.2'
   # for autotesting with rspec
-  gem 'guard-rspec', '3.0.0'
+  gem 'guard-rspec', '3.0.1'
   # Prettier RSpec output
   gem 'fuubar', '1.1.0'
 end
