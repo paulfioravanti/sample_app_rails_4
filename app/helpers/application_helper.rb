@@ -13,11 +13,11 @@ module ApplicationHelper
     'http://gravatar.com/emails'
   end
 
-  def locale_language_labels
-    [
-      { label: t('layouts.locale_selector.en'), locale: 'en' },
-      { label: t('layouts.locale_selector.it'), locale: 'it' },
-      { label: t('layouts.locale_selector.ja'), locale: 'ja' }
-    ]
-  end
+  # def locale_language_labels
+  #   [
+  #     { label: t('layouts.locale_selector.en'), locale: 'en' },
+  #     { label: t('layouts.locale_selector.it'), locale: 'it' },
+  #     { label: t('layouts.locale_selector.ja'), locale: 'ja' }
+  #   ]
+  # end
 end
