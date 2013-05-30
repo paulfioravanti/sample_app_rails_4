@@ -130,7 +130,7 @@ I haven't yet been able to get the following functionality that worked in Rails 
 - Added tests for [Globalize3](https://github.com/svenfuchs/globalize3) translations and expanded factories to include a micropost with its relevant translations
 
 ### Reporting/Optimizing
-- Used [SimpleCov](https://github.com/colszowka/simplecov) to ensure as much test coverage as possible.  Currently at 100%.
+- Used [SimpleCov](https://github.com/colszowka/simplecov) to ensure as much test coverage as possible.
 - Used [Bullet](https://github.com/flyerhzm/bullet) to optimize queries
 
 ## Social
