@@ -11,7 +11,7 @@ shared_context "micropost creation" do |locale|
   def expect_translations_created_for(micropost, current_locale)
     all_locales do |target_locale|
       next if target_locale == current_locale
-      click_link t("layouts.locale_selector.#{target_locale}")
+      click_link t('layouts.locale_selector.language_labels')[target_locale]
       expect(page).to display(new_micropost)
     end
   end

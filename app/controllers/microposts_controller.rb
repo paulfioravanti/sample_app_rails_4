@@ -5,7 +5,8 @@ class MicropostsController < ApplicationController
   respond_to :html, :json
 
   def create
-    @micropost = current_user.microposts.build(micropost_params)
+    # @micropost = current_user.microposts.build(micropost_params)
+    @micropost = Micropost.new(micropost_params)
     if @micropost.save
       create_translations
       flash[:success] = t('flash.micropost_created')
@@ -24,7 +25,7 @@ class MicropostsController < ApplicationController
   private
 
     def micropost_params
-      params.require(:micropost).permit(:content)
+      params.require(:micropost).permit(:content).merge(user: current_user)
     end
 
     # Put the same content in all locale translations

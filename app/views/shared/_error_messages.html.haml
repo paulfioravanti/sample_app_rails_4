@@ -3,6 +3,6 @@
     .alert.alert-error
       %a.close{ "data-dismiss" => "alert" } ×
       = t('.form_errors')
-    / %ul
-    /   - object.errors.full_messages.each do |msg|
-    /     %li= msg
+    %ul
+      / - object.errors.full_messages.each do |msg|
+      /   %li= msg
