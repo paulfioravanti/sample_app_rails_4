@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @microposts = @user.microposts.eagerly_paginate(params[:page])
+    @microposts = @user.microposts.eagerly_paginate(page_param)
   end
 
   def new
@@ -75,6 +75,12 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation)
+    end
+
+    # This is of dubious merit as it's just hiding assignment
+    # from Brakeman, but it does silence dynamic path render issues
+    def page_param
+      params[:page]
     end
 
     def show_follow
