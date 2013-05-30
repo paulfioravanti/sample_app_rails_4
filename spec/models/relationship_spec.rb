@@ -22,7 +22,7 @@ describe Relationship do
   let(:follower) { create(:user) }
   let(:followed) { create(:user) }
   let(:active_relationship) do
-    follower.active_relationships.build(followed_id: followed.id)
+    follower.active_relationships.create(followed_id: followed.id)
   end
 
   specify "associations" do

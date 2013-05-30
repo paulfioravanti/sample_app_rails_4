@@ -27,13 +27,4 @@ describe ApplicationHelper do
       expect(gravatar_link).to eq(link)
     end
   end
-
-  describe "#locale_language_labels" do
-    all_locales do |locale|
-      include_context "locale language labels", locale
-      it "returns the correct locale labels" do
-        expect(locale_language_labels).to eq(locale_labels)
-      end
-    end
-  end
 end

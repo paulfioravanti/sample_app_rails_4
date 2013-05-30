@@ -21,7 +21,7 @@ gem 'uglifier', '2.1.1'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.0.0'
 # Use jquery as the JavaScript library
-gem 'jquery-rails', '2.2.1'
+gem 'jquery-rails', '3.0.0'
 # Speed up application links
 gem 'turbolinks', '1.1.1'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
