@@ -27,7 +27,7 @@ gem 'turbolinks', '1.2.0'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
-gem 'jbuilder', '1.4.1'
+gem 'jbuilder', '1.4.2'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.0.1'
 # App secret key configuration
