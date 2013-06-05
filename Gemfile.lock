@@ -169,7 +169,7 @@ GEM
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
     highline (1.6.19)
-    hike (1.2.2)
+    hike (1.2.3)
     i18n (0.6.4)
     i18n-js (2.1.2)
       i18n
@@ -182,7 +182,7 @@ GEM
     json (1.8.0)
     launchy (2.3.0)
       addressable (~> 2.3)
-    listen (1.1.5)
+    listen (1.1.6)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
@@ -197,7 +197,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     minitest (4.7.4)
-    multi_json (1.7.5)
+    multi_json (1.7.6)
     nokogiri (1.5.9)
     pg (0.15.1)
     polyglot (0.3.3)
@@ -308,7 +308,7 @@ GEM
     thread_safe (0.1.0)
       atomic
     tilt (1.4.1)
-    treetop (1.4.12)
+    treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
     turbolinks (1.2.0)
