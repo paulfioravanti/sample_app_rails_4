@@ -198,7 +198,7 @@ GEM
     mime-types (1.23)
     minitest (4.7.4)
     multi_json (1.7.6)
-    nokogiri (1.5.9)
+    nokogiri (1.5.10)
     pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12.2)
