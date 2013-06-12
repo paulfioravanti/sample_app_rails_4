@@ -6,7 +6,7 @@ gem 'rails', '4.0.0.rc2'
 # Postgres as database for Active Record
 gem 'pg', '0.15.1'
 # Use SCSS for stylesheets
-gem 'sass-rails', '4.0.0.rc1'
+gem 'sass-rails', '4.0.0.rc2'
 # Twitter frameworks to make nice UI design elements
 gem 'bootstrap-sass', '2.3.2.0'
 # will_paginate pagination for Bootstrap
@@ -21,7 +21,7 @@ gem 'uglifier', '2.1.1'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.0.0'
 # Use jquery as the JavaScript library
-gem 'jquery-rails', '3.0.0'
+gem 'jquery-rails', '3.0.1'
 # Speed up application links
 gem 'turbolinks', '1.2.0'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
@@ -70,7 +70,7 @@ group :development do
   gem 'rails-footnotes', '3.7.9'
   # Better error pages
   gem 'better_errors', '0.9.0'
-  gem 'binding_of_caller', '0.7.1'
+  gem 'binding_of_caller', '0.7.2'
   # Gem for RailsPanel Chrome extension
   gem 'meta_request', '0.2.6'
 end
