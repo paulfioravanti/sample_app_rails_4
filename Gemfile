@@ -2,13 +2,13 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Edge Rails: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.rc1'
+gem 'rails', '4.0.0.rc2'
 # Postgres as database for Active Record
 gem 'pg', '0.15.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.0.rc1'
 # Twitter frameworks to make nice UI design elements
-gem 'bootstrap-sass', '2.3.1.3'
+gem 'bootstrap-sass', '2.3.2.0'
 # will_paginate pagination for Bootstrap
 gem 'bootstrap-will_paginate', '0.0.9'
 # Font Awesome icons
@@ -89,7 +89,7 @@ group :test do
   # Use factories instead of ActiveRecord objects
   gem 'factory_girl_rails', '4.2.1'
   # English-like matchers for unit-testing
-  gem 'shoulda-matchers', '2.1.0'
+  gem 'shoulda-matchers', '2.2.0'
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
   # Speed up test server
   gem 'spork-rails', github: 'railstutorial/spork-rails'
