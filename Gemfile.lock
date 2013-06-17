@@ -15,7 +15,7 @@ GIT
 
 GIT
   remote: git://github.com/plataformatec/simple_form.git
-  revision: 0da7b473cb3ec75f1e8fa84b91d2dc07ff4febf6
+  revision: 3df45ebff856c4a0d7653fa3b24442a3fe8f6c17
   specs:
     simple_form (3.0.0.rc)
       actionpack (>= 4.0.0.rc1, < 4.1)
@@ -148,7 +148,7 @@ GEM
       rspec-instafail (~> 0.2.0)
       ruby-progressbar (~> 1.0)
     growl (1.0.3)
-    guard (1.8.0)
+    guard (1.8.1)
       formatador (>= 0.2.4)
       listen (>= 1.0.0)
       lumberjack (>= 1.0.2)
@@ -182,7 +182,7 @@ GEM
     json (1.8.0)
     launchy (2.3.0)
       addressable (~> 2.3)
-    listen (1.2.1)
+    listen (1.2.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
