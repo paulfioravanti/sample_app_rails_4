@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/airblade/paper_trail.git
-  revision: e1d590fe16cb6072dd3a5e6b42e64476c4d14acb
+  revision: e76fb279eb5f0bbfa481f16b820a075419ab3d3f
   branch: rails4
   specs:
     paper_trail (2.7.2)
