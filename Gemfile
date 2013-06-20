@@ -94,7 +94,7 @@ group :test do
   # Speed up test server
   gem 'spork-rails', github: 'railstutorial/spork-rails'
   # guard/spork integration
-  gem 'guard-spork', '1.5.0'
+  gem 'guard-spork', '1.5.1'
   # Helps in debugging tests by being able to launch browser
   gem 'launchy', '2.3.0'
   # Mac-dependent gems for Guard notifications
