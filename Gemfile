@@ -31,7 +31,7 @@ gem 'jbuilder', '1.4.2'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.0.1'
 # App secret key configuration
-gem 'figaro', '0.6.4'
+gem 'figaro', '0.7.0'
 # Substiture ERb for Haml
 gem 'haml-rails', '0.4.0'
 # Use of Markdown for static content in views
