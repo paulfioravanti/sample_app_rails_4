@@ -8,20 +8,6 @@ GIT
       railties (~> 4.0)
 
 GIT
-  remote: git://github.com/bmabey/database_cleaner.git
-  revision: 5dc784af6661fd9067953458fbac1b2e0334f0db
-  specs:
-    database_cleaner (1.0.1)
-
-GIT
-  remote: git://github.com/plataformatec/simple_form.git
-  revision: dcf4862972792abafeefd73f6b1d385322a64115
-  specs:
-    simple_form (3.0.0.rc)
-      actionpack (>= 4.0.0, < 4.1)
-      activemodel (>= 4.0.0, < 4.1)
-
-GIT
   remote: git://github.com/railstutorial/spork-rails.git
   revision: 5db525af2f917047057f546bc1ac2574d1c6b11e
   specs:
@@ -122,6 +108,7 @@ GEM
       rest-client
       simplecov (>= 0.7)
       thor
+    database_cleaner (1.0.1)
     debug_inspector (0.0.2)
     diff-lcs (1.2.4)
     erubis (2.7.0)
@@ -285,6 +272,9 @@ GEM
     sexp_processor (4.2.1)
     shoulda-matchers (2.2.0)
       activesupport (>= 3.0.0)
+    simple_form (3.0.0.rc)
+      actionpack (>= 4.0.0.rc1, < 4.1)
+      activemodel (>= 4.0.0.rc1, < 4.1)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
@@ -338,7 +328,7 @@ DEPENDENCIES
   capybara (= 2.1.0)
   coffee-rails (= 4.0.0)
   coveralls (= 0.6.7)
-  database_cleaner!
+  database_cleaner (= 1.0.1)
   factory_girl_rails (= 4.2.1)
   faker (= 1.1.2)
   figaro (= 0.7.0)
@@ -367,7 +357,7 @@ DEPENDENCIES
   sass-rails (= 4.0.0)
   sdoc (= 0.3.20)
   shoulda-matchers (= 2.2.0)
-  simple_form!
+  simple_form (= 3.0.0.rc)
   simplecov (= 0.7.1)
   spork-rails!
   turbolinks (= 1.2.0)

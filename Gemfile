@@ -14,8 +14,7 @@ gem 'bootstrap-will_paginate', '0.0.9'
 # Font Awesome icons
 gem 'font-awesome-sass-rails', '3.0.2.2'
 # Simplified forms
-# gem 'simple_form', '2.1.0'
-gem 'simple_form', github: 'plataformatec/simple_form'
+gem 'simple_form', '3.0.0.rc'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.1.1'
 # Use CoffeeScript for .js.coffee assets and views
@@ -90,7 +89,7 @@ group :test do
   gem 'factory_girl_rails', '4.2.1'
   # English-like matchers for unit-testing
   gem 'shoulda-matchers', '2.2.0'
-  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  gem 'database_cleaner', '1.0.1'
   # Speed up test server
   gem 'spork-rails', github: 'railstutorial/spork-rails'
   # guard/spork integration
