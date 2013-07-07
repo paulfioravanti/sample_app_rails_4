@@ -28,7 +28,7 @@ gem 'turbolinks', '1.2.0'
 # Build JSON APIs with ease
 gem 'jbuilder', '1.4.2'
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '3.0.1'
+gem 'bcrypt-ruby', '3.0.0', require: false
 # App secret key configuration
 gem 'figaro', '0.7.0'
 # Substiture ERb for Haml
@@ -75,7 +75,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '2.13.2'
+  gem 'rspec-rails', '2.14.0'
   # for autotesting with rspec
   gem 'guard-rspec', '3.0.2'
   # Prettier RSpec output
