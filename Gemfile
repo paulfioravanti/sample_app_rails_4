@@ -16,13 +16,13 @@ gem 'font-awesome-sass-rails', '3.0.2.2'
 # Simplified forms
 gem 'simple_form', '3.0.0.rc'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '2.1.1'
+gem 'uglifier', '2.1.2'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.0.0'
 # Use jquery as the JavaScript library
-gem 'jquery-rails', '3.0.2'
+gem 'jquery-rails', '3.0.4'
 # Speed up application links
-gem 'turbolinks', '1.2.0'
+gem 'turbolinks', '1.3.0'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
