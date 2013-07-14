@@ -7,14 +7,6 @@ env:
   - DB: postgresql
   global:
   - secure: |-
-      Xgd562z6Tl5cYewlSoX2jOdv+3jxdN2ihJ1kBVBT3fbZ2wmVyibW/dZa77e7
-      f7GPXkNMjZRRoVOaNU7vr21HBNPB+ofNaZ7dJkqorXAFHS8YKKTwDqsYpMSN
-      QpE6tf3GxswukrYgnzrsO1sF/Vh4CtSJBiyIt0PdM9bmBic2Lz0=
-  - secure: |-
-      UE8cZHDN1ckKC82vNPzd/Jwx4T185biRX/0aXgjyePLyKqoWZrGxSOKiqsdO
-      RBOUNjNEYx0StJy0vdeFxmUe0jKLe4owNM+OoDMKfcbnyuH5aOb4GALyPC4P
-      yPRtka30CoS4HQmiaRNq1a644U5iPHnCxUmPpbc1LtYRg4hxIF4=
-  - secure: |-
       fD2O/w2tyJljR7SSBYjbDPOeRZFg58oPoD5FxYfW74CD/j1foK4ZB+Ovc0Lr
       gEAYrOPkK+FKgHnKJgg27qse2LE3IQi5MCKkvIkGToG+705NkcQu6RoS3YfU
       HVI+tZLcu4zat7L/xZYEwE/V/JekCyhjy6QTtDiqNX/yCk0pGXA=
@@ -26,19 +18,21 @@ env:
       Cl9ByU+EoOgMsWbKgf0HJkjezWkKPs4WovhOYkNYT41+TxEzqHUP+RMOoIsn
       A0mhGf4k1EsLUjIltT4VFyN9bQIdleH+33OuC20/Q4dbfEnlbe3G0PMlqjdW
       FjjKtmMDSQ/dCABpLUWH+nREhI2da0Po0VcZJq6geYQlcd+Wesk=
+  - secure: |-
+      dalHvQo1esdU2DN2XXv0kscXliqt42kTPBF0XiRBlzngGppW4e4320Zu64nL
+      OQJvxKXjiKMPjWHwMyTwkdmIgQuicNSTGKH7+CKlK+R+uEoaXhCLVMUYrdO6
+      GF7dK0PmxtkYsWX2I/3YkiCXwF1P6mQBQbdnQKivE4Qt7KWnYg0=
+  - secure: |-
+      IrkK84+ZZy6ZS/9tfwn8K8wNKfCnmCSpcY2RQnOWpnZwSxlrqNDE/X61+owR
+      rasBvgAdBYhg/7XBa08YTEeKOL/ktZn27+tmLQ9rr7LhZH+/NuHxIUHIDisn
+      zVOGi9wfgYqnXeZ/KVB71lsv072KruBTVjv+liyZ1gI+BVP0fKY=
 bundler_args: --without development
 before_script:
 - psql -c "create database $DB_NAME;" -U $DB_USER
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 script:
 - bundle exec rspec --no-drb --format progress spec/
-after_success:
-- wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-- git remote add heroku $HEROKU_GIT_URL
-- echo "Host heroku.com" >> ~/.ssh/config
-- echo "   StrictHostKeyChecking no" >> ~/.ssh/config
-- echo "   CheckHostIP no" >> ~/.ssh/config
-- echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
-- heroku keys:clear
-- yes | heroku keys:add
-- yes | git push heroku master
+deploy:
+  provider: heroku
+  app: $HEROKU_APP_NAME
+  api_key: $HEROKU_API_KEY
