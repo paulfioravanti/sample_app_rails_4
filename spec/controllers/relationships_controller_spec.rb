@@ -14,7 +14,11 @@ describe RelationshipsController do
     -> { xhr :delete, :destroy, id: relationship.id }
   end
 
-  before { cookies[:remember_token] = user.remember_token }
+  before do
+    remember_token = User.new_remember_token
+    cookies[:remember_token] = remember_token
+    user.update_attribute(:remember_token, User.encrypt(remember_token))
+  end
 
   specify "a relationship gets created with Ajax" do
     expect(creating_a_relationship).to change(Relationship, :count).by(1)

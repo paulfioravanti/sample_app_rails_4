@@ -31,18 +31,16 @@ def fill_in_fields_with(user, new_name = nil, new_email = nil)
 end
 
 def sign_in!(locale, user, options={})
-  unless options[:via_request]
+  if options[:via_request]
+    post session_path(locale, email: user.email, password: user.password)
+    remember_token = User.new_remember_token
+    cookies[:remember_token] = User.encrypt(remember_token)
+  else
     visit signin_path(locale) unless current_path == signin_path(locale)
     scope = 'sessions.new'
     fill_in t(:email, scope: scope),    with: user.email
     fill_in t(:password, scope: scope), with: user.password
     click_button t(:sign_in, scope: scope)
-  else
-    post session_path(locale, email: user.email, password: user.password)
-    cookies[:remember_token] = user.remember_token
-    # remember_token = User.new_remember_token
-    # cookies[:remember_token] = remember_token
-    # user.update_attribute(:remember_token, User.encrypt(remember_token))
   end
 end
 

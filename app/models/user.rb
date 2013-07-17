@@ -29,7 +29,7 @@ class User < ActiveRecord::Base
   has_many :followers, through: :passive_relationships, source: :follower
 
   before_save :reformat_email
-  before_save :create_remember_token
+  before_create :create_remember_token
 
   validates :name,  presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = %r(\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z)i
@@ -41,6 +41,14 @@ class User < ActiveRecord::Base
 
   def self.authenticate(email, password)
     find_by(email: email).try(:authenticate, password)
+  end
+
+  def self.new_remember_token
+    SecureRandom.urlsafe_base64
+  end
+
+  def self.encrypt(token)
+    Digest::SHA1.hexdigest(token.to_s)
   end
 
   def feed
@@ -66,7 +74,7 @@ class User < ActiveRecord::Base
     end
 
     def create_remember_token
-      self.remember_token = SecureRandom.urlsafe_base64
+      self.remember_token = User.encrypt(User.new_remember_token)
     end
 
 end
