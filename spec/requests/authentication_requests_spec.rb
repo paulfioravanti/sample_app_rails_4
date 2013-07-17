@@ -33,7 +33,7 @@ all_locales do |locale|
     end
 
     context "for signed-in users" do
-      before { sign_in_via_request(locale, user) }
+      before { sign_in!(locale, user, via_request: true) }
 
       it "redirects on GET Users#new" do
         get signup_path(locale)
@@ -48,7 +48,7 @@ all_locales do |locale|
 
     context "as a wrong user" do
       let(:wrong_user) { create(:user) }
-      before { sign_in_via_request(locale, user) }
+      before { sign_in!(locale, user, via_request: true) }
 
       it "redirects on PUT Users#update" do
         put user_path(locale, wrong_user)
@@ -58,7 +58,7 @@ all_locales do |locale|
 
     context "as a non-admin user" do
       let(:non_admin) { create(:user) }
-      before { sign_in_via_request(locale, user) }
+      before { sign_in!(locale, user, via_request: true) }
 
       it "redirects on DELETE Users#destroy" do
         delete user_path(locale, user)
@@ -74,7 +74,7 @@ all_locales do |locale|
       let(:no_suicide) { t('flash.no_admin_suicide', name: admin.name) }
 
       it "prevents admin users from destroying themselves" do
-        sign_in_via_request(locale, admin)
+        sign_in!(locale, admin, via_request: true)
         expect(admin_attempting_to_delete_self).to_not change(User, :count)
         expect(response).to redirect_to(users_url(locale))
         expect(flash[:error]).to eq(no_suicide)

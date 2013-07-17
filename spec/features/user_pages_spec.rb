@@ -62,7 +62,7 @@ all_locales do |locale|
     end
 
     scenario "when an admin" do
-      sign_in_through_user_interface(admin, locale)
+      sign_in!(locale, admin)
       visit users_path(locale)
       expect(page).to have_link(delete_link, href: delete_any_user)
       expect(page).to_not have_link(delete_link, href: delete_self)

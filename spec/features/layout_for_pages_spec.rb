@@ -34,7 +34,7 @@ all_locales do |locale|
     end
 
     scenario "confirming visible links" do
-      sign_in_through_user_interface(user, locale)
+      sign_in!(locale, user)
       expect(page).to_not have_link sign_in
       expect(page).to have_link(sign_out, href: user_sign_out)
       expect(page).to have_link(users, href: list_users_page)

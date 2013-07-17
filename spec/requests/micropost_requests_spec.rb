@@ -11,7 +11,7 @@ all_locales do |locale|
     end
     let(:translations) { Micropost.translation_class }
 
-    before { sign_in_via_request(locale, user) }
+    before { sign_in!(locale, user, via_request: true) }
 
     it "redirects on DELETE Micropost#destroy if not own micropost" do
       delete micropost_path(locale, other_micropost)

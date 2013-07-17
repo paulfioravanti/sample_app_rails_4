@@ -7,7 +7,7 @@ all_locales do |locale|
     let(:deleting_a_user) { -> { delete user_path(locale, User.first) } }
     before do
       create_list(:user, 1)
-      sign_in_via_request(locale, admin)
+      sign_in!(locale, admin, via_request: true)
     end
 
     specify "deleting a user as an admin destroys the user" do

@@ -23,12 +23,12 @@ all_locales do |locale|
     end
 
     scenario "successful sign in" do
-      sign_in_through_user_interface(user, locale)
+      sign_in!(locale, user)
       expect(page).to have_title user.name
     end
 
     scenario "signed-in user signing out" do
-      sign_in_through_user_interface(user, locale)
+      sign_in!(locale, user)
       click_link sign_out
       expect(page).to have_link sign_in
     end
@@ -63,16 +63,16 @@ all_locales do |locale|
 
     scenario "visiting a protected page and sign in, out, then in again" do
       visit edit_user_page
-      sign_in_through_user_interface(user, locale)
+      sign_in!(locale, user)
       expect(page).to have_title edit_user_page_title
       click_link sign_out
       click_link sign_in
-      sign_in_through_user_interface(user, locale)
+      sign_in!(locale, user)
       expect(page).to have_title user.name
     end
 
     scenario "attempting to edit another user's details" do
-      sign_in_through_user_interface(user, locale)
+      sign_in!(locale, user)
       visit edit_wrong_user_page
       expect(page).to_not have_title edit_user_page_title
     end

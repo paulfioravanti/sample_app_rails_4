@@ -30,17 +30,20 @@ def fill_in_fields_with(user, new_name = nil, new_email = nil)
   fill_in t(:password_confirmation, scope: scope), with: password
 end
 
-def sign_in_through_user_interface(user, locale)
-  visit signin_path(locale) unless current_path == signin_path(locale)
-  scope = 'sessions.new'
-  fill_in t(:email, scope: scope),    with: user.email
-  fill_in t(:password, scope: scope), with: user.password
-  click_button t(:sign_in, scope: scope)
-end
-
-def sign_in_via_request(locale, user)
-  post session_path(locale, email: user.email, password: user.password)
-  cookies[:remember_token] = user.remember_token
+def sign_in!(locale, user, options={})
+  unless options[:via_request]
+    visit signin_path(locale) unless current_path == signin_path(locale)
+    scope = 'sessions.new'
+    fill_in t(:email, scope: scope),    with: user.email
+    fill_in t(:password, scope: scope), with: user.password
+    click_button t(:sign_in, scope: scope)
+  else
+    post session_path(locale, email: user.email, password: user.password)
+    cookies[:remember_token] = user.remember_token
+    # remember_token = User.new_remember_token
+    # cookies[:remember_token] = remember_token
+    # user.update_attribute(:remember_token, User.encrypt(remember_token))
+  end
 end
 
 def invalid_email_addresses
