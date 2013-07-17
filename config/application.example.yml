@@ -15,3 +15,6 @@ production:
   DB_NAME: # your production db name here
   DB_USER: # your production db username here
   DB_PASSWORD: # your production db password here
+
+HEROKU_API_KEY: # your Heroku API key here
+HEROKU_APP_NAME: # your Heroku app name here eg sampleapp-rails4
