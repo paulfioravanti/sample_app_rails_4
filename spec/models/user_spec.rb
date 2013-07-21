@@ -121,8 +121,9 @@ describe User do
       create(:micropost, user: user, created_at: 1.hour.ago)
     end
 
-    specify "microposts ordered by created_at DESC" do
-      expect(user.microposts).to eq([newer_micropost, older_micropost])
+    specify "microposts scoped to be ordered by created_at DESC" do
+      expect(user.microposts.by_descending_date).to \
+        eq([newer_micropost, older_micropost])
     end
 
     specify "when user is destroyed" do

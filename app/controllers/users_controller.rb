@@ -14,7 +14,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @microposts = @user.microposts.eagerly_paginate(page_param)
+    @microposts =
+      @user.microposts.by_descending_date.eagerly_paginate(page_param)
   end
 
   def new

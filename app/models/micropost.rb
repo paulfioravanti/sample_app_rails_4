@@ -18,7 +18,7 @@ class Micropost < ActiveRecord::Base
   translates :content
   belongs_to :user
 
-  default_scope -> { order('created_at DESC') }
+  scope :by_descending_date, -> { order('created_at DESC') }
 
   validates :user, presence: true
   validates :content, presence: true, length: { maximum: 140 }
