@@ -26,10 +26,10 @@ Generate a secret key:
 
     $ rake secret
 
-Copy the resulting string into the `SECRET_KEY_BASE` entry in **config/application.yml**, along with your database information for all environments:
+Copy the resulting string into the `SK` entry in **config/application.yml**, along with your database information for all environments:
 
     # App keys
-    SECRET_KEY_BASE: # your rake secret generated token
+    SK: # your rake secret generated token
 
     development:
       DB_NAME: # your dev db name here
@@ -46,6 +46,8 @@ Copy the resulting string into the `SECRET_KEY_BASE` entry in **config/applicati
       DB_USER: # your prod db username here
       DB_PASSWORD: # your prod db password here
 
+Note: `rake secret` generates a key of 128 characters.  Use 114 of those characters if you want to use the `secret_key_base` as a secure config variable in your Travis build.
+
 **Deploying with Heroku**
 
 After creating the Heroku repo, generate production environment variables automatically using [Figaro](https://github.com/laserlemon/figaro):
@@ -54,7 +56,7 @@ After creating the Heroku repo, generate production environment variables automa
 
 Or, do it manually:
 
-    $ heroku config:set SECRET_TOKEN={{YOUR_SECRET_TOKEN}}
+    $ heroku config:set SK={{YOUR_SECRET_KEY_BASE}}
     $ heroku config:set DB_NAME={{YOUR_DB_NAME_UNDER_PRODUCTION}} # eg: my_app_production
     $ heroku config:set DB_USER={{YOUR_DB_USER}}
     $ heroku config:set DB_PASSWORD={{YOUR_DB_PASSWORD}}
@@ -62,6 +64,7 @@ Or, do it manually:
 Let Heroku compile assets to avoid doing it locally (optional, as [the functionality is experimental](https://devcenter.heroku.com/articles/labs-user-env-compile)):
 
     $ heroku labs:enable user-env-compile -a {{YOUR_HEROKU_APP_NAME}}
+    # May not need this if compiling Heroku slug on Travis...
 
 **Continuous Integration/Deployment with Travis CI**
 
@@ -70,6 +73,7 @@ If you're using Travis for continuous integration testing, do the following (wit
 Create encrypted travis variables for your Heroku API key and Repo name:
 
     $ gem install travis
+    travis encrypt SK={{YOUR_SECRET_KEY_BASE_OF_114_CHARS_OR_LESS}} --add
     $ travis encrypt your_username/your_repo HEROKU_API_KEY={{YOUR_HEROKU_API_KEY}} --add
     $ travis encrypt HEROKU_GIT_URL={{YOUR_HEROKU_GIT_URL}} # eg git@heroku.com:my_app.git --add
     $ travis encrypt DB_NAME={{YOUR_DB_NAME_UNDER_TEST}} --add # eg: my_app_test
@@ -80,6 +84,7 @@ Or, without the `--add` flag, you can add them manually to **.travis.yml**
 
     env:
       global:
+      - secure: {{YOUR_ENCRYPTED_SECRET_KEY_BASE}}
       - secure: {{YOUR_ENCRYPTED_HEROKU_API_KEY}}
       - secure: {{YOUR_ENCRYPTED_HEROKU_GIT_URL}}
       - secure: {{YOUR_ENCRYPTED_DB_NAME_UNDER_TEST}}
@@ -132,6 +137,9 @@ I haven't yet been able to get the following functionality that worked in Rails 
 ### Reporting/Optimizing
 - Used [SimpleCov](https://github.com/colszowka/simplecov) to ensure as much test coverage as possible.
 - Used [Bullet](https://github.com/flyerhzm/bullet) to optimize queries
+
+### Other
+- Travis can only encrypt a string of total length of 117 characters, including the name of the variable, which is less than the 128 character string that `rake secret` generates.  It's convenient to be able to pass the `secret_key_base` directly to Travis and have Travis use it to compile a Heroku slug to deploy, but I'm uncertain as to realistically how much less secure a 114 character key (SK={KEY}) is versus a 128 character key
 
 ## Social
 
