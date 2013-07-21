@@ -1,5 +1,9 @@
 # App keys
-SECRET_KEY_BASE: # run rake secret to generate a secret token, then place here
+
+# rake secret generates a key of 128 characters.
+# Use 117 of those characters if you want to use the secret_key_base
+# as a secure config variable in your Travis build and deploy
+SECRET_KEY_BASE: # your secret_key_base from secret_token.rb here
 
 development:
   DB_NAME: # your dev db name here

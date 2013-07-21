@@ -7,6 +7,10 @@ env:
   - DB: postgresql
   global:
   - secure: |-
+      Z3aKJLDIF5izlGa3iHKDPSN4Db6QP1FYiFY7sGdK3ZCItO7YROYEq0aROm4U
+      TTuqWmHEMC2cASz573oSTQdB/NS8qBygpb6+MVZ5fmT3TL/wvid6wQ0pr74K
+      acP0BEEG21iag2Zi79rlj4cuKZqdnF+tc26x2XYQnrFfvxGSdNE=
+  - secure: |-
       fD2O/w2tyJljR7SSBYjbDPOeRZFg58oPoD5FxYfW74CD/j1foK4ZB+Ovc0Lr
       gEAYrOPkK+FKgHnKJgg27qse2LE3IQi5MCKkvIkGToG+705NkcQu6RoS3YfU
       HVI+tZLcu4zat7L/xZYEwE/V/JekCyhjy6QTtDiqNX/yCk0pGXA=
