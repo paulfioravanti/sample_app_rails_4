@@ -9,8 +9,8 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-if Rails.env.production? && Figaro.env.sk.blank?
+if Rails.env.production? && ENV['SK'].blank?
   raise 'secret_key_base environment variable must be set!'
 end
 
-SampleAppRails4::Application.config.secret_key_base = Figaro.env.sk
+SampleAppRails4::Application.config.secret_key_base = ENV['SK']
