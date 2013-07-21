@@ -32,11 +32,11 @@ env:
       QYzIFCoecxbPc5tmgZm0D6KnKCaJQShThBDYeSwSqlaIp1/PtYM=
 bundler_args: --without development
 before_script:
-- psql -c "create database $DB_NAME;" -U $DB_USER
+- psql -c "create database <%= Figaro.env.db_name %>;" -U <%= Figaro.env.db_user %>
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 script:
 - bundle exec rspec --no-drb --format progress spec/
 deploy:
   provider: heroku
-  app: $HEROKU_APP_NAME
-  api_key: $HEROKU_API_KEY
+  app: <%= Figaro.env.heroku_app_name %>
+  api_key: <%= Figaro.env.heroku_api_key %>

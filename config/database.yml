@@ -11,9 +11,9 @@
 postgresql: &postgresql
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV['DB_NAME'] %>
-  username: <%= ENV['DB_USER'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
+  database: <%= Figaro.env.db_name %>
+  username: <%= Figaro.env.db_user %>
+  password: <%= Figaro.env.db_password %>
 
 defaults: &defaults
   pool: 5
