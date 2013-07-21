@@ -8,7 +8,7 @@ gem 'pg', '0.15.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.0'
 # Twitter frameworks to make nice UI design elements
-gem 'bootstrap-sass', '2.3.2.0'
+gem 'bootstrap-sass', '2.3.2.1'
 # will_paginate pagination for Bootstrap
 gem 'bootstrap-will_paginate', '0.0.9'
 # Font Awesome icons
@@ -59,10 +59,10 @@ group :development do
   # for annotating model files with their properties
   gem 'annotate', '2.5.0'
   # Security checking
-  gem 'brakeman', '2.0.0'
+  gem 'brakeman', '2.1.0'
   # Code quality
-  gem 'reek', '1.3.1'
-  gem 'rails_best_practices', '1.13.8'
+  # gem 'reek', '1.3.1'
+  gem 'rails_best_practices', '1.14.0'
   # Query optimization monitoring
   gem 'bullet', '4.6.0'
   # Debugging information
