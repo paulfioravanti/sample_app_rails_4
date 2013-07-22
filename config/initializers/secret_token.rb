@@ -13,4 +13,4 @@
 #   raise 'secret_key_base environment variable must be set!'
 # end
 
-SampleAppRails4::Application.config.secret_key_base = ENV['SK'] || x * 30
+SampleAppRails4::Application.config.secret_key_base = ENV['SK'] || 'x' * 30
