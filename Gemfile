@@ -4,7 +4,7 @@ ruby '2.0.0'
 # Edge Rails: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 # Postgres as database for Active Record
-gem 'pg', '0.15.1'
+gem 'pg', '0.16.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.0'
 # Twitter frameworks to make nice UI design elements
