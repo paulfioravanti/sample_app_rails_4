@@ -44,7 +44,7 @@ env:
       qzIXVBq3J+X5dgXCZqkeZgcv2R+ocG6eQPBkhKXYHEjuuACtC28=
 bundler_args: --without development
 before_script:
-- psql -c "create database $DB_NAME;" -U $DB_USER
+- psql -c "create database $DB_NAME_TEST;" -U $DB_USER_TEST
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 script:
 - bundle exec rspec --no-drb --format progress spec/
