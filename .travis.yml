@@ -7,29 +7,41 @@ env:
   - DB: postgresql
   global:
   - secure: |-
-      W+LDHbJfLj4RMWkA4mhEWjebfbdBpxZmnpUs0FtnXEfMu73TQEh4LTpXfaj/
-      HrlWRujhy88OOf2hpr7AqPk3QSBulFDL0WJtrbgvzZ7mVCHJMoY8zsSgrGMa
-      7nSKldg22ZfCXUweU9L7TwMGTUkNouyUXauYB6ai+hMaEFk06ZA=
+      HtPRbdmF7kIEb7vyPHjdxSiZoiyp5Q3ZJti6qzZsCCZ6KOXKMpign806wcSl
+      5X9YcpnaG918/KA5UClgAMo+n5/RXjrs0VxnaQhLi1OXuGncntsHU+8MbVsy
+      Fmnj8w4bu4kWOIp4xxxFCodlL68XmSNsfX0Th9dZnG8e7Xb/S50=
   - secure: |-
-      fD2O/w2tyJljR7SSBYjbDPOeRZFg58oPoD5FxYfW74CD/j1foK4ZB+Ovc0Lr
-      gEAYrOPkK+FKgHnKJgg27qse2LE3IQi5MCKkvIkGToG+705NkcQu6RoS3YfU
-      HVI+tZLcu4zat7L/xZYEwE/V/JekCyhjy6QTtDiqNX/yCk0pGXA=
+      FaLVkMuq9uLYp8sAR4IZwM51fF59dHCCVPvRSkmyuHvZHoUItiscAWSZcPMD
+      JbsILcaGBnMKHzfpCecQnrwObdDlmSzORsWnBqPso4u+AKooO7y3tKwu7Yy4
+      N3SpvzyCO6hUYtqtEK+5d2VQYDOh1oBVbyjk44rrep5KaqKDb3Q=
   - secure: |-
-      YTHn5tmeWgoyGQ6RGRRmC/GfYescEac72g4Zmd/fScu7tR4DgcwvrNdFOdm/
-      JUxYLTQDFJMFBNo4ziRyTpFN0poI8u3YYF+JWiGyXL9DivHeWeKKsZnVbKuz
-      bxtxmkjb3hdDrWFoPKCLXdYM9WY/b2MITVvtJRkBjb0ojg9xr4Y=
+      BNa/3KSDeCb3D4L9yzkJ2DtSfsuI+zkUPHHSJ60yyp6QEuQ+YtG5M+jVJIBW
+      W8qBAb6o3K8GIwTlF8v8Rgs/TG1oSMEEXIFjTUPOn+cEinuRIYsi99q1tKmf
+      ZjoXE3a1rx6rKVpRjozEDjlURG3o362ntRA6yzM4fOGOtDR9IXY=
   - secure: |-
-      Cl9ByU+EoOgMsWbKgf0HJkjezWkKPs4WovhOYkNYT41+TxEzqHUP+RMOoIsn
-      A0mhGf4k1EsLUjIltT4VFyN9bQIdleH+33OuC20/Q4dbfEnlbe3G0PMlqjdW
-      FjjKtmMDSQ/dCABpLUWH+nREhI2da0Po0VcZJq6geYQlcd+Wesk=
+      capKgfKHBgFlGfREst/3CRR5I5gth49xZbXGUPmQKCMc5WieKB87hroMowaL
+      lLpvcgh8moPPgCpiWZ62cbpYC93si9A+h0asOlLmfDi0TDq9J87ydmposVk3
+      cktJuzB+ofH7KpUKGQ+NZRsc8fiUNsAA083uGPep0mZg8WYhpHc=
   - secure: |-
-      H0V5X3Gg83amUISOwpKCMWpZskWG20m6+Es9mqGY/7mAeHWubRW5okhEd+fK
-      zvsUVWkTc5ZRUlKNUUCI4OWVDjotxTMM3Q76ljPXFLPz3xdl5+0YpXo8LvnU
-      vvevciA8m880RoZGh0QFdHe5a7I4913bvXe6mAg/9jP0Ie1E9ck=
+      YgUM9WVqfUGCSa02MgRac0ZAvv2ZS9+EFdqxvsI8cV/aZWgO2zTtcDSM0n3i
+      oXb0OWxPPGjjQf2GlNC9sSDiJZD1jXT8epN0vFmfZvSuCtiVoH0QUYJn43y7
+      tGXhlYaMTpYTnEsPjgg2r3WkZ4VTSsML3EneUxvIfnwsvNgQ7t4=
   - secure: |-
-      ZcxEehI57TGds7geXoqurdFDA0Ru7uNoTIf7Fkeam+Nc0Bt3/k+hzwZfdPHv
-      EEohvm4tXPOOUUptpT6HvnFg238kOWFR93RbcNXZlgQ6ie2lEfweq/HKfYTt
-      QYzIFCoecxbPc5tmgZm0D6KnKCaJQShThBDYeSwSqlaIp1/PtYM=
+      WxUi2KjjK2Yof+3yEUdg/itVGdGxsmW7lZ/DE77P81RfAFTJycvORifE3Lk+
+      yfKOIMxHuwHe+l37jkn/UxxLRsvhFgkFpOXv7PPbKZO7bsAmQRdLcY/F3huC
+      YZCayo701Vx9N+DS/JBrru0C2hz19HW2njE7rWXL7qr3XcP0rlA=
+  - secure: |-
+      gIu7Ek0BobZSg5nKq1z4z4G/CTKBFGtD222UhiMYi0nd0JTdESDUsjLwW3tu
+      piNXu+CWWoAFV2E/C4E49aTezsKH7hHO+UUuozyyp2TAAQwP7OjiJFt2XdGh
+      GbK+w2E/iALf0ftW1d89qSuBgunrF5VSKkeO2wdBQEdWmDUgjHc=
+  - secure: |-
+      RdI4V354Dtxq8l6FAW5JUuSpzrbJg/MQdjOzwiKucBTt+2QkUEKkS3Lto/7t
+      GlFiX266QlQQxtNgfSDH3gr2Q9zo3T7tNboCeDrXpkKP09O2PSI6b0m5kZIm
+      zIibp02iILLIpEb/uLy//WDXWyoLBgFqVSwWSrakxDzCMOGdqYg=
+  - secure: |-
+      On6nU1dLy9Z/cW9DCjz5H29xl1O3wMllsQWo0ux34jpJr6O7WMKZNlp+A6+C
+      yd+btt7r5BwofZVwOUr8pGTk2ec00krfaNX9sOgkhSohB5XDmBn9JBQffMO9
+      qzIXVBq3J+X5dgXCZqkeZgcv2R+ocG6eQPBkhKXYHEjuuACtC28=
 bundler_args: --without development
 before_script:
 - psql -c "create database $DB_NAME;" -U $DB_USER
@@ -40,6 +52,6 @@ deploy:
   provider: heroku
   app: $HEROKU_APP_NAME
   api_key: $HEROKU_API_KEY
-  run: "rake db:migrate"
-  on:
+  run: rake db:migrate
+  true:
     rvm: 2.0.0

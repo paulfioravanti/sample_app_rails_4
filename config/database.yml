@@ -11,9 +11,6 @@
 postgresql: &postgresql
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV['DB_NAME'] %>
-  username: <%= ENV['DB_USER'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
 
 defaults: &defaults
   pool: 5
@@ -21,9 +18,18 @@ defaults: &defaults
 
 development:
   <<: *defaults
+  database: <%= ENV['DB_NAME_DEV'] %>
+  username: <%= ENV['DB_USER_DEV'] %>
+  password: <%= ENV['DB_PASSWORD_DEV'] %>
 
 test:
   <<: *defaults
+  database: <%= ENV['DB_NAME_TEST'] %>
+  username: <%= ENV['DB_USER_TEST'] %>
+  password: <%= ENV['DB_PASSWORD_TEST'] %>
 
 production:
   <<: *defaults
+  database: <%= ENV['DB_NAME_PROD'] %>
+  username: <%= ENV['DB_USER_PROD'] %>
+  password: <%= ENV['DB_PASSWORD_PROD'] %>

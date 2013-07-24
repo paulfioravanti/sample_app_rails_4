@@ -32,19 +32,22 @@ Copy the resulting string into the `SK` entry in **config/application.yml**, alo
     SK: # your rake secret generated token
 
     development:
-      DB_NAME: # your dev db name here
-      DB_USER: # your dev db username here
-      DB_PASSWORD: # your dev db password here
+      DB_NAME_DEV: # your dev db name here
+      DB_USER_DEV: # your dev db username here
+      DB_PASSWORD_DEV: # your dev db password here
 
     test:
-      DB_NAME: # your test db name here
-      DB_USER: # your test db username here
-      DB_PASSWORD: # your test db password here
+      DB_NAME_TEST: # your test db name here
+      DB_USER_TEST: # your test db username here
+      DB_PASSWORD_TEST: # your test db password here
 
     production:
-      DB_NAME: # your prod db name here
-      DB_USER: # your prod db username here
-      DB_PASSWORD: # your prod db password here
+      DB_NAME_PROD: # your prod db name here
+      DB_USER_PROD: # your prod db username here
+      DB_PASSWORD_PROD: # your prod db password here
+
+    HEROKU_API_KEY: # your Heroku api key here
+    HEROKU_APP_NAME: # your Heroku app name here
 
 Note: `rake secret` generates a key of 128 characters.  Use 114 of those characters if you want to use the `secret_key_base` as a secure config variable in your Travis build.
 
@@ -73,23 +76,30 @@ If you're using Travis for continuous integration testing, do the following (wit
 Create encrypted travis variables for your Heroku API key and Repo name:
 
     $ gem install travis
-    travis encrypt SK={{YOUR_SECRET_KEY_BASE_OF_114_CHARS_OR_LESS}} --add
-    $ travis encrypt your_username/your_repo HEROKU_API_KEY={{YOUR_HEROKU_API_KEY}} --add
-    $ travis encrypt HEROKU_GIT_URL={{YOUR_HEROKU_GIT_URL}} # eg git@heroku.com:my_app.git --add
-    $ travis encrypt DB_NAME={{YOUR_DB_NAME_UNDER_TEST}} --add # eg: my_app_test
-    $ travis encrypt DB_USER={{YOUR_DB_USER}} --add
-    $ travis encrypt DB_PASSWORD={{YOUR_DB_PASSWORD}} --add
+    $ travis encrypt SK={{YOUR_SECRET_KEY_BASE_OF_114_CHARS_OR_LESS}} --add
+    $ travis encrypt DB_NAME={{YOUR_DB_NAME_TEST}} --add # eg: my_app_test
+    $ travis encrypt DB_USER={{YOUR_DB_USER_TEST}} --add
+    $ travis encrypt DB_PASSWORD={{YOUR_DB_PASSWORD_TEST}} --add
+    $ travis encrypt DB_NAME={{YOUR_DB_NAME_PROD}} --add # eg: my_app_test
+    $ travis encrypt DB_USER={{YOUR_DB_USER_PROD}} --add
+    $ travis encrypt DB_PASSWORD={{YOUR_DB_PASSWORD_PROD}} --add
+    $ travis encrypt HEROKU_API_KEY={{YOUR_HEROKU_API_KEY}} --add
+    $ travis encrypt HEROKU_APP_NAME={{YOUR_HEROKU_APP_NAME}} --add # eg my_app
 
 Or, without the `--add` flag, you can add them manually to **.travis.yml**
 
     env:
       global:
-      - secure: {{YOUR_ENCRYPTED_SECRET_KEY_BASE}}
+      - secure: {{YOUR_ENCRYPTED_SECRET_KEY_BASE_OF_114_CHARS_OR_LESS}}
+      - secure: {{YOUR_ENCRYPTED_DB_NAME_TEST}}
+      - secure: {{YOUR_ENCRYPTED_DB_USER_TEST}}
+      - secure: {{YOUR_ENCRYPTED_DB_PASSWORD_TEST}}
+      - secure: {{YOUR_ENCRYPTED_DB_NAME_PROD}}
+      - secure: {{YOUR_ENCRYPTED_DB_USER_PROD}}
+      - secure: {{YOUR_ENCRYPTED_DB_PASSWORD_PROD}}
       - secure: {{YOUR_ENCRYPTED_HEROKU_API_KEY}}
       - secure: {{YOUR_ENCRYPTED_HEROKU_GIT_URL}}
-      - secure: {{YOUR_ENCRYPTED_DB_NAME_UNDER_TEST}}
-      - secure: {{YOUR_ENCRYPTED_DB_USER}}
-      - secure: {{YOUR_ENCRYPTED_DB_PASSWORD}}
+
 
 Finally, configure the databases:
 

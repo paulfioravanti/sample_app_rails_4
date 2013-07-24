@@ -6,19 +6,19 @@
 SK: # your secret_key_base from secret_token.rb here
 
 development:
-  DB_NAME: # your dev db name here
-  DB_USER: # your dev db username here
-  DB_PASSWORD: # your dev db password here
+  DB_NAME_DEV: # your dev db name here
+  DB_USER_DEV: # your dev db username here
+  DB_PASSWORD_DEV: # your dev db password here
 
 test:
-  DB_NAME: # your test db name here
-  DB_USER: # your test db username here
-  DB_PASSWORD: # your test db password here
+  DB_NAME_TEST: # your test db name here
+  DB_USER_TEST: # your test db username here
+  DB_PASSWORD_TEST: # your test db password here
 
 production:
-  DB_NAME: # your production db name here
-  DB_USER: # your production db username here
-  DB_PASSWORD: # your production db password here
+  DB_NAME_PROD: # your production db name here
+  DB_USER_PROD: # your production db username here
+  DB_PASSWORD_PROD: # your production db password here
 
 HEROKU_API_KEY: # your Heroku API key here
 HEROKU_APP_NAME: # your Heroku app name here eg sampleapp-rails4
