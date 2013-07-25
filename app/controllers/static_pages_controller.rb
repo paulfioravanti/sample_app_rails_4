@@ -5,7 +5,8 @@ class StaticPagesController < ApplicationController
   def home
     if signed_in?
       @micropost  = current_user.microposts.build
-      @feed_items = current_user.feed.eagerly_paginate(params[:page])
+      @feed_items =
+        current_user.feed.by_descending_date.eagerly_paginate(params[:page])
     else
       localized_page
     end

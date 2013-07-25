@@ -26,7 +26,7 @@ class Micropost < ActiveRecord::Base
   def self.from_users_actively_followed_by(user)
     followed_users = Relationship.with_users_actively_followed_by(user).to_sql
     where("user_id IN (#{followed_users}) OR user_id = :user",
-          user: user)
+          user: user.id)
   end
 
   def self.eagerly_paginate(page)

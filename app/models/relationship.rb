@@ -23,6 +23,6 @@ class Relationship < ActiveRecord::Base
   validates :followed, presence: true
 
   def self.with_users_actively_followed_by(user)
-    select(:followed_id).where("follower_id = ?", user)
+    select(:followed_id).where("follower_id = ?", user.id)
   end
 end

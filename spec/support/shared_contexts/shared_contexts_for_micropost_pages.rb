@@ -32,8 +32,12 @@ end
 shared_context "micropost pagination" do |locale|
   include_context "sign in a user", locale
   given(:next_page)                 { t('will_paginate.next_label') }
-  given(:first_page_of_microposts)  { user.microposts.paginate(page: 1) }
-  given(:second_page_of_microposts) { user.microposts.paginate(page: 2) }
+  given(:first_page_of_microposts) do
+    user.microposts.by_descending_date.paginate(page: 1)
+  end
+  given(:second_page_of_microposts) do
+    user.microposts.by_descending_date.paginate(page: 2)
+  end
   background do
     create_list(:micropost, 31, user: user)
     visit locale_root_path(locale)
