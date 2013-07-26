@@ -53,5 +53,5 @@ deploy:
   app: $HEROKU_APP_NAME
   api_key: $HEROKU_API_KEY
   run: "rake db:migrate"
-  true:
+  on:
     rvm: 2.0.0
