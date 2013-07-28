@@ -43,7 +43,7 @@ gem 'i18n-js', '2.1.2'
 # i18n strings for default Rails
 gem 'rails-i18n', '0.7.4'
 # For fake example users with “realistic” names/emails
-gem 'faker', '1.1.2'
+gem 'faker', '1.2.0'
 # i18n for database content
 # gem 'globalize3', '0.3.0'
 gem 'globalize3', github: 'svenfuchs/globalize3', branch: 'rails4'
