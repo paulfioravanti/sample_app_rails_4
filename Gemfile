@@ -89,7 +89,7 @@ group :test do
   gem 'factory_girl_rails', '4.2.1'
   # English-like matchers for unit-testing
   gem 'shoulda-matchers', '2.2.0'
-  gem 'database_cleaner', '1.0.1'
+  gem 'database_cleaner', '1.1.0'
   # Speed up test server
   gem 'spork-rails', github: 'railstutorial/spork-rails'
   # guard/spork integration
