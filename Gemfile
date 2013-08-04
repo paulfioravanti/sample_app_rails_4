@@ -49,6 +49,8 @@ gem 'faker', '1.2.0'
 gem 'globalize3', github: 'svenfuchs/globalize3', branch: 'rails4'
 # Override globalize dependency that has a dependency on Rails 3
 gem 'paper_trail', github: 'airblade/paper_trail', branch: 'rails4'
+# Switch away from WEBrick
+gem 'unicorn', '4.6.3'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
