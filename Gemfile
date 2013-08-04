@@ -105,3 +105,8 @@ group :test do
   gem 'simplecov', '0.7.1', require: false
   gem 'coveralls', '0.6.7', require: false
 end
+
+group :production do
+  # Serve assets in production and set logger to standard out on Heroku
+  gem 'rails_12factor', '0.0.2'
+end
