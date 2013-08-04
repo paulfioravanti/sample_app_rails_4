@@ -8,10 +8,11 @@ GIT
       railties (~> 4.0)
 
 GIT
-  remote: git://github.com/railstutorial/spork-rails.git
-  revision: 5db525af2f917047057f546bc1ac2574d1c6b11e
+  remote: git://github.com/sporkrb/spork-rails.git
+  revision: 3224f84d8c31fcb0894e9a43f6c3ac67e3aa0d71
   specs:
     spork-rails (3.2.1)
+      rails (>= 3.0.0, < 5)
       spork (>= 1.0rc0)
 
 GIT
