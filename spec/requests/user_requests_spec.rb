@@ -14,4 +14,28 @@ all_locales do |locale|
       expect(deleting_a_user).to change(User, :count).by(-1)
     end
   end
+
+  describe "Edit user information" do
+    let(:user) { create(:user) }
+
+    before { sign_in!(locale, user, via_request: true) }
+
+    context "with forbidden attributes" do
+      let(:params) do
+        {
+          user: {
+            admin: true,
+            password: user.password,
+            password_confirmation: user.password
+          }
+        }
+      end
+
+      before { patch user_path(locale, user), params }
+
+      it "rejects forbidden attributes" do
+        expect(user.reload).not_to be_admin
+      end
+    end
+  end
 end
