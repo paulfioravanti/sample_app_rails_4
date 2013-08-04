@@ -5,5 +5,11 @@ unless ENV['DRB']
 end
 if ENV['TRAVIS']
   require 'coveralls'
+
+  # Silence Coverall's chatty output
+  module Coveralls
+    def puts(string) ; nil ; end
+  end
+
   Coveralls.wear! 'rails'
 end
