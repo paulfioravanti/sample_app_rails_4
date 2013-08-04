@@ -5,6 +5,5 @@ unless ENV['DRB']
 end
 if ENV['TRAVIS']
   require 'coveralls'
-  Coveralls.noisy = false
   Coveralls.wear! 'rails'
 end
