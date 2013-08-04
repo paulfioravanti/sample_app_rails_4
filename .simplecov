@@ -4,7 +4,7 @@ unless ENV['DRB']
   SimpleCov.start 'rails'
 end
 if ENV['TRAVIS']
-  Coveralls.noisy = false
   require 'coveralls'
+  Coveralls.noisy = false
   Coveralls.wear! 'rails'
 end
