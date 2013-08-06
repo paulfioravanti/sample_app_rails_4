@@ -74,7 +74,7 @@ group :development do
   gem 'binding_of_caller', '0.7.2'
   # Gem for RailsPanel Chrome extension
   gem 'meta_request', '0.2.8'
-  gem 'i18n_tools', '0.1.5', require: 'i18n_tools/tasks'
+  gem 'i18n-tasks'
 end
 
 group :development, :test do
