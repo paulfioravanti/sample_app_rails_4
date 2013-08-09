@@ -51,6 +51,8 @@ gem 'globalize3', github: 'svenfuchs/globalize3', branch: 'rails4'
 gem 'paper_trail', github: 'airblade/paper_trail', branch: 'rails4'
 # Switch away from WEBrick
 gem 'unicorn', '4.6.3'
+# Use to find missing/unused translations
+gem 'i18n-tasks', '0.0.8'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -74,8 +76,6 @@ group :development do
   gem 'binding_of_caller', '0.7.2'
   # Gem for RailsPanel Chrome extension
   gem 'meta_request', '0.2.8'
-  # Use to find missing/unused translations
-  gem 'i18n-tasks', '0.0.8', require: 'i18n_tools/tasks'
   # Find unused routes and unreachable methods
   gem 'traceroute', '0.3.0'
 end
