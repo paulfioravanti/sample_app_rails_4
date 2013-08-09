@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :micropost do
     content { Faker::Lorem.sentence(5) }
-    user    { create(:user) }
+    user
 
     trait :with_translations do
       after(:create) do |micropost|
