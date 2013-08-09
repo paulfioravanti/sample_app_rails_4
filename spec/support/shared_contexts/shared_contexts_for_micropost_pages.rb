@@ -24,7 +24,7 @@ shared_context "micropost destruction" do |locale|
   given(:translations)         { Micropost.translation_class }
   given(:locale_count)         { I18n.available_locales.count }
   background do
-    create(:micropost_with_translations, user: user)
+    create(:micropost, :with_translations, user: user)
     visit locale_root_path(locale)
   end
 end
