@@ -75,7 +75,7 @@ group :development do
   # Gem for RailsPanel Chrome extension
   gem 'meta_request', '0.2.8'
   # Use to find missing/unused translations
-  gem 'i18n-tasks', '0.0.8'
+  gem 'i18n-tasks', '0.0.8', require: 'i18n_tools/tasks'
   # Find unused routes and unreachable methods
   gem 'traceroute', '0.3.0'
 end
