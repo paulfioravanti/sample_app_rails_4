@@ -74,7 +74,9 @@ group :development do
   gem 'binding_of_caller', '0.7.2'
   # Gem for RailsPanel Chrome extension
   gem 'meta_request', '0.2.8'
+  # Use to find missing/unused translations
   gem 'i18n-tasks', '0.0.8'
+  # Find unused routes and unreachable methods
   gem 'traceroute', '0.3.0'
 end
 

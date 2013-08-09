@@ -359,7 +359,7 @@ DEPENDENCIES
   guard-spork (= 1.5.1)
   haml-rails (= 0.4.0)
   i18n-js (= 2.1.2)
-  i18n-tasks
+  i18n-tasks (= 0.0.8)
   jbuilder (= 1.4.2)
   jquery-rails (= 3.0.4)
   launchy (= 2.3.0)
@@ -380,7 +380,7 @@ DEPENDENCIES
   simple_form (= 3.0.0.rc)
   simplecov (= 0.7.1)
   spork-rails!
-  traceroute
+  traceroute (= 0.3.0)
   turbolinks (= 1.3.0)
   uglifier (= 2.1.2)
   unicorn (= 4.6.3)
