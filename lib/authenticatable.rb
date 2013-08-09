@@ -4,6 +4,8 @@ module Authenticatable
       :sign_out, :current_user, :current_user=, :current_user?
   end
 
+  private
+
   def sign_in(user)
     remember_token = User.new_remember_token
     cookies.permanent[:remember_token] = remember_token

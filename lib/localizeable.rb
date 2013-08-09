@@ -3,6 +3,8 @@ module Localizeable
     base.send :before_action, :set_locale, :locale_redirect
   end
 
+  private
+
   def set_locale
     I18n.locale = params[:set_locale] || params[:locale]
   end

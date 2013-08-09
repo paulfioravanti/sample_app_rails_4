@@ -312,6 +312,8 @@ GEM
       atomic
     tilt (1.4.1)
     tins (0.8.3)
+    traceroute (0.3.0)
+      rails (>= 3.0.0)
     treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
@@ -378,6 +380,7 @@ DEPENDENCIES
   simple_form (= 3.0.0.rc)
   simplecov (= 0.7.1)
   spork-rails!
+  traceroute
   turbolinks (= 1.3.0)
   uglifier (= 2.1.2)
   unicorn (= 4.6.3)
