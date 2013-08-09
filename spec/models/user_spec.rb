@@ -120,6 +120,7 @@ describe User do
     let!(:newer_micropost) do
       create(:micropost, user: user, created_at: 1.hour.ago)
     end
+    let(:destroying_a_user) { -> { user.destroy } }
 
     specify "microposts scoped to be ordered by created_at DESC" do
       expect(user.microposts.by_descending_date).to \
@@ -127,7 +128,7 @@ describe User do
     end
 
     specify "when user is destroyed" do
-      expect(-> { user.destroy }).to change(Micropost, :count).by(-2)
+      expect(destroying_a_user).to change(Micropost, :count).by(-2)
     end
 
     describe "status" do
@@ -174,6 +175,8 @@ describe User do
 
   describe "relationship associations" do
     let(:other_user) { create(:user) }
+    let(:destroying_a_user) { -> { user.destroy } }
+    let(:destroying_a_follower_or_followed_user) { -> { other_user.destroy } }
 
     before do
       user.follow!(other_user)
@@ -181,7 +184,7 @@ describe User do
     end
 
     specify "when a user is destroyed" do
-      expect(-> { user.destroy }).to change(Relationship, :count).by(-2)
+      expect(destroying_a_user).to change(Relationship, :count).by(-2)
       expect(user.active_relationships).to be_empty
       expect(user.passive_relationships).to be_empty
       expect(other_user.active_relationships).to_not include(user)
@@ -189,7 +192,8 @@ describe User do
     end
 
     specify "when a follower/followed user is destroyed" do
-      expect(-> { other_user.destroy }).to change(Relationship, :count).by(-2)
+      expect(destroying_a_follower_or_followed_user).to \
+        change(Relationship, :count).by(-2)
       expect(user.active_relationships).to_not include(user)
       expect(user.passive_relationships).to_not include(user)
     end
