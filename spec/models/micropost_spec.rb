@@ -27,7 +27,7 @@ describe Micropost do
 
   specify "associations" do
     expect(micropost).to belong_to(:user)
-    expect(micropost.user).to eql(user)
+    expect(micropost.user).to eq(user)
   end
 
   specify "class level methods" do
