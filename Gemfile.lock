@@ -1,11 +1,10 @@
 GIT
   remote: git://github.com/airblade/paper_trail.git
-  revision: c441a5de2d61042126bb042c3c18012fca3af32b
-  branch: rails4
+  revision: 4f00933afdb1a371ef0902d26b4b58233e01a294
   specs:
-    paper_trail (2.7.2)
-      activerecord (~> 4.0)
-      railties (~> 4.0)
+    paper_trail (3.0.0.beta)
+      activerecord (>= 3.0, < 5.0)
+      railties (>= 3.0, < 5.0)
 
 GIT
   remote: git://github.com/sporkrb/spork-rails.git
@@ -17,13 +16,13 @@ GIT
 
 GIT
   remote: git://github.com/svenfuchs/globalize3.git
-  revision: 29e24aea102c3fc8a8e0a6bf70529532b4980d50
+  revision: 52d41af963436ad88ba16fbdfc39271747ebce54
   branch: rails4
   specs:
     globalize3 (0.3.0)
       activemodel (>= 4.0.0)
       activerecord (>= 4.0.0)
-      paper_trail (~> 2)
+      paper_trail (~> 3.0.0.beta)
 
 GEM
   remote: https://rubygems.org/
@@ -191,7 +190,7 @@ GEM
     mime-types (1.23)
     mini_portile (0.5.1)
     minitest (4.7.5)
-    multi_json (1.7.8)
+    multi_json (1.7.9)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     pg (0.16.0)

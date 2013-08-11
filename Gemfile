@@ -48,7 +48,7 @@ gem 'faker', '1.2.0'
 # gem 'globalize3', '0.3.0'
 gem 'globalize3', github: 'svenfuchs/globalize3', branch: 'rails4'
 # Override globalize dependency that has a dependency on Rails 3
-gem 'paper_trail', github: 'airblade/paper_trail', branch: 'rails4'
+gem 'paper_trail', github: 'airblade/paper_trail'
 # Switch away from WEBrick
 gem 'unicorn', '4.6.3'
 # Use to find missing/unused translations
