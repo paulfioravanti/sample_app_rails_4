@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: git://github.com/svenfuchs/globalize3.git
-  revision: 52d41af963436ad88ba16fbdfc39271747ebce54
+  revision: 7b276cbab773d0c8ac5647cfc33f4d08489249a1
   branch: rails4
   specs:
     globalize3 (0.3.0)
@@ -264,7 +264,7 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    ruby-progressbar (1.1.1)
+    ruby-progressbar (1.2.0)
     ruby2ruby (2.0.6)
       ruby_parser (~> 3.1)
       sexp_processor (~> 4.0)
