@@ -54,7 +54,7 @@ GEM
     annotate (2.5.0)
       rake
     arel (4.0.0)
-    atomic (1.1.12)
+    atomic (1.1.13)
     awesome_print (1.1.0)
     bcrypt-ruby (3.0.1)
     better_errors (0.9.0)
