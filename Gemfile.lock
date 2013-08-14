@@ -1,10 +1,9 @@
 GIT
   remote: git://github.com/airblade/paper_trail.git
-  revision: 4f00933afdb1a371ef0902d26b4b58233e01a294
+  revision: efe386d0b1fd097b5038d7624546a2b6c3c413ce
   specs:
     paper_trail (3.0.0.beta)
       activerecord (>= 3.0, < 5.0)
-      railties (>= 3.0, < 5.0)
 
 GIT
   remote: git://github.com/sporkrb/spork-rails.git
@@ -90,7 +89,7 @@ GEM
       xpath (~> 2.0)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
-    code_analyzer (0.3.2)
+    code_analyzer (0.4.0)
       sexp_processor
     coderay (1.0.9)
     coffee-rails (4.0.0)
@@ -157,7 +156,7 @@ GEM
       railties (>= 3.1, < 4.1)
     highline (1.6.19)
     hike (1.2.3)
-    i18n (0.6.4)
+    i18n (0.6.5)
     i18n-js (2.1.2)
       i18n
     i18n-tasks (0.0.8)
@@ -219,10 +218,10 @@ GEM
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
-    rails_best_practices (1.14.0)
+    rails_best_practices (1.14.1)
       activesupport
       awesome_print
-      code_analyzer
+      code_analyzer (>= 0.4.0)
       colored
       erubis
       i18n
@@ -252,7 +251,7 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    rspec-core (2.14.4)
+    rspec-core (2.14.5)
     rspec-expectations (2.14.1)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-instafail (0.2.4)
@@ -310,7 +309,7 @@ GEM
     thread_safe (0.1.2)
       atomic
     tilt (1.4.1)
-    tins (0.8.3)
+    tins (0.8.4)
     traceroute (0.3.0)
       rails (>= 3.0.0)
     treetop (1.4.14)
@@ -369,7 +368,7 @@ DEPENDENCIES
   rails-footnotes (= 3.7.9)
   rails-i18n (= 0.7.4)
   rails_12factor (= 0.0.2)
-  rails_best_practices (= 1.14.0)
+  rails_best_practices (= 1.14.1)
   rb-fsevent (= 0.9.3)
   rdiscount (= 2.1.6)
   rspec-rails (= 2.14.0)
