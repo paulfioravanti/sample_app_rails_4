@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/airblade/paper_trail.git
-  revision: efe386d0b1fd097b5038d7624546a2b6c3c413ce
+  revision: e81d1d435ba40f62e81dc944406fefe80e29a2e7
   specs:
     paper_trail (3.0.0.beta)
       activerecord (>= 3.0, < 5.0)
@@ -186,7 +186,7 @@ GEM
       rack-contrib
       railties
     method_source (0.8.2)
-    mime-types (1.23)
+    mime-types (1.24)
     mini_portile (0.5.1)
     minitest (4.7.5)
     multi_json (1.7.9)
