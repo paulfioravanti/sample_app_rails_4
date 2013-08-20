@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/airblade/paper_trail.git
-  revision: 6ec14d7695313cbea55534cf72ef3076dac93e5a
+  revision: ccf06da461d7b16196ca263126513763ad566d2a
   specs:
     paper_trail (3.0.0.beta)
       activerecord (>= 3.0, < 5.0)
@@ -277,7 +277,7 @@ GEM
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
-    sexp_processor (4.2.1)
+    sexp_processor (4.3.0)
     shoulda-matchers (2.2.0)
       activesupport (>= 3.0.0)
     simple_form (3.0.0.rc)
