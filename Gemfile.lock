@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/airblade/paper_trail.git
-  revision: fdf85343a82914a975899fa311647fd5c9fb7b28
+  revision: 98848bb9b2db2bb4e1cbf18ba4a5a3b748451485
   specs:
     paper_trail (3.0.0.beta)
       activerecord (>= 3.0, < 5.0)
@@ -62,7 +62,7 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (2.3.2.1)
+    bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     bootstrap-will_paginate (0.0.9)
       will_paginate
@@ -321,7 +321,7 @@ GEM
     turbolinks (1.3.0)
       coffee-rails
     tzinfo (0.3.37)
-    uglifier (2.2.0)
+    uglifier (2.2.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     unicorn (4.6.3)
@@ -341,7 +341,7 @@ DEPENDENCIES
   bcrypt-ruby (= 3.0.1)
   better_errors (= 0.9.0)
   binding_of_caller (= 0.7.2)
-  bootstrap-sass (= 2.3.2.1)
+  bootstrap-sass (= 2.3.2.2)
   bootstrap-will_paginate (= 0.0.9)
   brakeman (= 2.1.1)
   bullet (= 4.6.0)
@@ -384,5 +384,5 @@ DEPENDENCIES
   spork-rails!
   traceroute (= 0.3.0)
   turbolinks (= 1.3.0)
-  uglifier (= 2.2.0)
+  uglifier (= 2.2.1)
   unicorn (= 4.6.3)

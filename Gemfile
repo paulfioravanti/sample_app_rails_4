@@ -8,7 +8,7 @@ gem 'pg', '0.16.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.0'
 # Twitter frameworks to make nice UI design elements
-gem 'bootstrap-sass', '2.3.2.1'
+gem 'bootstrap-sass', '2.3.2.2'
 # will_paginate pagination for Bootstrap
 gem 'bootstrap-will_paginate', '0.0.9'
 # Font Awesome icons
@@ -16,7 +16,7 @@ gem 'font-awesome-sass-rails', '3.0.2.2'
 # Simplified forms
 gem 'simple_form', '3.0.0.rc'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '2.2.0'
+gem 'uglifier', '2.2.1'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.0.0'
 # Use jquery as the JavaScript library
