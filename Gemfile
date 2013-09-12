@@ -107,7 +107,7 @@ group :test do
   gem 'growl', '1.0.3'
   # Code coverage reports
   gem 'simplecov', '0.7.1', require: false
-  gem 'coveralls', '0.6.7', require: false
+  gem 'coveralls', '0.6.9', require: false
 end
 
 group :production do
