@@ -4,13 +4,13 @@ ruby '2.0.0'
 # Edge Rails: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 # Postgres as database for Active Record
-gem 'pg', '0.16.0'
+gem 'pg', '0.17.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.0'
 # Twitter frameworks to make nice UI design elements
 gem 'bootstrap-sass', '2.3.2.2'
 # will_paginate pagination for Bootstrap
-gem 'bootstrap-will_paginate', '0.0.9'
+gem 'bootstrap-will_paginate', '0.0.10'
 # Font Awesome icons
 gem 'font-awesome-sass-rails', '3.0.2.2'
 # Simplified forms
