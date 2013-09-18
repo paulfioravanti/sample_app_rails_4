@@ -63,7 +63,7 @@ group :development do
   # for annotating model files with their properties
   gem 'annotate', '2.5.0'
   # Security checking
-  gem 'brakeman', '2.1.1'
+  gem 'brakeman', '2.1.2'
   # Code quality
   gem 'reek', '1.3.3'
   gem 'rails_best_practices', '1.14.1'
@@ -107,7 +107,7 @@ group :test do
   gem 'growl', '1.0.3'
   # Code coverage reports
   gem 'simplecov', '0.7.1', require: false
-  gem 'coveralls', '0.6.9', require: false
+  gem 'coveralls', '0.7.0', require: false
 end
 
 group :production do
