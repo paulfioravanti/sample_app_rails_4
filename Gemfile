@@ -14,7 +14,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 # Font Awesome icons
 gem 'font-awesome-sass-rails', '3.0.2.2'
 # Simplified forms
-gem 'simple_form', '3.0.0.rc'
+gem 'simple_form', '3.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.2.1'
 # Use CoffeeScript for .js.coffee assets and views
@@ -52,7 +52,7 @@ gem 'paper_trail', github: 'airblade/paper_trail'
 # Switch away from WEBrick
 gem 'unicorn', '4.6.3'
 # Use to find missing/unused translations
-gem 'i18n-tasks', '0.0.8'
+gem 'i18n-tasks', '0.1.1'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
