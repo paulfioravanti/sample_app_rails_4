@@ -56,7 +56,7 @@ GEM
     arel (4.0.0)
     atomic (1.1.14)
     awesome_print (1.2.0)
-    bcrypt-ruby (3.0.1)
+    bcrypt-ruby (3.1.2)
     better_errors (1.0.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -337,7 +337,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (= 2.5.0)
-  bcrypt-ruby (= 3.0.1)
+  bcrypt-ruby (= 3.1.2)
   better_errors (= 1.0.1)
   binding_of_caller (= 0.7.2)
   bootstrap-sass (= 2.3.2.2)
