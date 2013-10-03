@@ -28,7 +28,7 @@ gem 'turbolinks', '1.3.0'
 # Build JSON APIs with ease
 gem 'jbuilder', '1.5.1'
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '3.1.2', require: false
+gem 'bcrypt-ruby', '3.0.1', require: false
 # App secret key configuration
 gem 'figaro', '0.7.0'
 # Substiture ERb for Haml
