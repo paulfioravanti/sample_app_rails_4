@@ -43,9 +43,9 @@ env:
       yd+btt7r5BwofZVwOUr8pGTk2ec00krfaNX9sOgkhSohB5XDmBn9JBQffMO9
       qzIXVBq3J+X5dgXCZqkeZgcv2R+ocG6eQPBkhKXYHEjuuACtC28=
   - secure: |-
-      aBvlG6dEyD/5NLEs3ySiMJniWtawVfK2vI4aQhJLyenvN4fdQJO5h/2dP3r3
-      Fb8Y0jmnrQCD4qhmeG1Me8fXa36b3q2o5dq+og6F4vWGxeRYlBBqK7nkLHfd
-      oni/8mxr3VJ/z83d9rlgJrn2YTdYBtze61+RXlRQ1RFEltlhH+Y=
+      QY+iRat9cjaIMSai1ihoV3/3lEGf6Mf0Q2YGRS4cALYnbgessD9FjPuuo7aR
+      qZRAJkX/N1BbHMCeMaFpJHLn80fZMvdKZH8xfpFzGeCgN60Rib8D1xvYXc6s
+      /RuydqzeqjLauIr1+R9udEfIWHPcpGuuo+qOpuJoEuvyNzfhU3s=
 bundler_args: --without development
 before_script:
 - psql -c "create database $DB_NAME_TEST;" -U $DB_USER_TEST
