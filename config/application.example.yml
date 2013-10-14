@@ -22,3 +22,4 @@ production:
 
 HEROKU_API_KEY: # your Heroku API key here
 HEROKU_APP_NAME: # your Heroku app name here eg sampleapp-rails4
+ROLLBAR_ACCESS_TOKEN: # your Rollbar access token here

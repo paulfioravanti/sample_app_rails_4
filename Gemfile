@@ -51,6 +51,8 @@ gem 'globalize', '4.0.0.alpha.1'
 gem 'unicorn', '4.6.3'
 # Use to find missing/unused translations
 gem 'i18n-tasks', '0.1.2'
+# Error tracking
+gem 'rollbar', '0.11.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
