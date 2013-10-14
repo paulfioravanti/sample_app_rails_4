@@ -2,10 +2,10 @@
 #
 # Table name: microposts
 #
+#  created_at :datetime
 #  id         :integer          not null, primary key
+#  updated_at :datetime
 #  user_id    :integer          not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
 #
 # Indexes
 #
