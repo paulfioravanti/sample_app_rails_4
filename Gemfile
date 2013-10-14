@@ -26,7 +26,7 @@ gem 'turbolinks', '1.3.0'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
-gem 'jbuilder', '1.5.1'
+gem 'jbuilder', '1.5.2'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.0.1', require: false
 # App secret key configuration
@@ -34,7 +34,7 @@ gem 'figaro', '0.7.0'
 # Substiture ERb for Haml
 gem 'haml-rails', '0.4.0'
 # Use of Markdown for static content in views
-gem 'rdiscount', '2.1.6'
+gem 'rdiscount', '2.1.7'
 # For JQuery timeago library
 ## Not currently working with Rails 4, revert to timeago_in_words
 # gem 'rails-timeago', '2.3.0'
@@ -52,7 +52,7 @@ gem 'paper_trail', github: 'airblade/paper_trail'
 # Switch away from WEBrick
 gem 'unicorn', '4.6.3'
 # Use to find missing/unused translations
-gem 'i18n-tasks', '0.1.1'
+gem 'i18n-tasks', '0.1.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -66,7 +66,7 @@ group :development do
   gem 'brakeman', '2.1.2'
   # Code quality
   gem 'reek', '1.3.3'
-  gem 'rails_best_practices', '1.14.1'
+  gem 'rails_best_practices', '1.14.4'
   # Query optimization monitoring
   gem 'bullet', '4.6.0'
   # Debugging information
@@ -85,7 +85,7 @@ group :development, :test do
   # for autotesting with rspec
   gem 'guard-rspec', '3.0.3'
   # Prettier RSpec output
-  gem 'fuubar', '1.1.1'
+  gem 'fuubar', '1.2.1'
 end
 
 group :test do
@@ -94,8 +94,8 @@ group :test do
   # Use factories instead of ActiveRecord objects
   gem 'factory_girl_rails', '4.2.1'
   # English-like matchers for unit-testing
-  gem 'shoulda-matchers', '2.2.0'
-  gem 'database_cleaner', '1.1.0'
+  gem 'shoulda-matchers', '2.4.0'
+  gem 'database_cleaner', '1.2.0'
   # Speed up test server
   gem 'spork-rails', github: 'sporkrb/spork-rails'
   # guard/spork integration
