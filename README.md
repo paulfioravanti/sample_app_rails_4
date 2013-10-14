@@ -48,6 +48,7 @@ Copy the resulting string into the `SK` entry in **config/application.yml**, alo
 
     HEROKU_API_KEY: # your Heroku api key here
     HEROKU_APP_NAME: # your Heroku app name here
+    ROLLBAR_ACCESS_TOKEN: # your Rollbar access token here
 
 Note: `rake secret` generates a key of 128 characters.  Use 114 of those characters if you want to use the `secret_key_base` as a secure config variable in your Travis build.
 
@@ -85,6 +86,7 @@ Create encrypted travis variables for your Heroku API key and Repo name:
     $ travis encrypt DB_PASSWORD={{YOUR_DB_PASSWORD_PROD}} --add
     $ travis encrypt HEROKU_API_KEY={{YOUR_HEROKU_API_KEY}} --add
     $ travis encrypt HEROKU_APP_NAME={{YOUR_HEROKU_APP_NAME}} --add # eg my_app
+    $ travis encrypt ROLLBAR_ACCESS_TOKEN={{YOUR_ROLLBAR_ACCESS_TOKEN}} --add
 
 Or, without the `--add` flag, you can add them manually to **.travis.yml**
 
@@ -98,7 +100,8 @@ Or, without the `--add` flag, you can add them manually to **.travis.yml**
       - secure: {{YOUR_ENCRYPTED_DB_USER_PROD}}
       - secure: {{YOUR_ENCRYPTED_DB_PASSWORD_PROD}}
       - secure: {{YOUR_ENCRYPTED_HEROKU_API_KEY}}
-      - secure: {{YOUR_ENCRYPTED_HEROKU_GIT_URL}}
+      - secure: {{YOUR_ENCRYPTED_HEROKU_APP_NAME}}
+      - secure: {{YOUR_ROLLBAR_ACCESS_TOKEN}}
 
 
 Finally, configure the databases:
