@@ -53,6 +53,8 @@ gem 'unicorn', '4.6.3'
 gem 'i18n-tasks', '0.1.2'
 # Error tracking
 gem 'rollbar', '0.11.2'
+# Serve assets in production and set logger to standard out on Heroku
+gem 'rails_12factor', '0.0.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -108,9 +110,4 @@ group :test do
   # Code coverage reports
   gem 'simplecov', '0.7.1', require: false
   gem 'coveralls', '0.7.0', require: false
-end
-
-group :production do
-  # Serve assets in production and set logger to standard out on Heroku
-  gem 'rails_12factor', '0.0.2'
 end
