@@ -95,7 +95,7 @@ group :test do
   gem 'shoulda-matchers', '2.4.0'
   gem 'database_cleaner', '1.2.0'
   # Speed up test server
-  gem 'spork-rails', github: 'sporkrb/spork-rails'
+  gem 'spork-rails', '4.0.0'
   # guard/spork integration
   gem 'guard-spork', '1.5.1'
   # Helps in debugging tests by being able to launch browser
