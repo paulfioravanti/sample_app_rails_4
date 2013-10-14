@@ -41,7 +41,7 @@ gem 'rdiscount', '2.1.7'
 # For accessing i18n in js files
 gem 'i18n-js', '2.1.2'
 # i18n strings for default Rails
-gem 'rails-i18n', '0.7.4'
+gem 'rails-i18n', '4.0.0'
 # For fake example users with “realistic” names/emails
 gem 'faker', '1.2.0'
 # i18n for database content
