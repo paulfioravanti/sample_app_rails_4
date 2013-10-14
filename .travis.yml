@@ -49,7 +49,7 @@ env:
 bundler_args: --without development
 before_script:
 - psql -c "create database $DB_NAME_TEST;" -U $DB_USER_TEST
-- RAILS_ENV=test bundle exec rake db:migrate --trace
+- RAILS_ENV=test bundle exec rake db:migrate
 script:
 - bundle exec rspec --no-drb --format progress spec/
 deploy:
