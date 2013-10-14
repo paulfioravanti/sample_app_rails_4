@@ -1,27 +1,10 @@
 GIT
-  remote: git://github.com/airblade/paper_trail.git
-  revision: 617c203a897f934f9f4b7964bddeedfa63863eae
-  specs:
-    paper_trail (3.0.0.beta1)
-      activerecord (>= 3.0, < 5.0)
-
-GIT
   remote: git://github.com/sporkrb/spork-rails.git
   revision: 0dd45e59d3237b4c8f9efc215b46d9c07072a95e
   specs:
     spork-rails (4.0.0)
       rails (>= 3.0.0, < 5)
       spork (>= 1.0rc0)
-
-GIT
-  remote: git://github.com/svenfuchs/globalize3.git
-  revision: 82b3b36308677745b261bd147dda00ed4560a25d
-  branch: rails4
-  specs:
-    globalize3 (0.3.0)
-      activemodel (>= 4.0.0)
-      activerecord (>= 4.0.0)
-      paper_trail (~> 3.0.0.beta)
 
 GEM
   remote: https://rubygems.org/
@@ -133,6 +116,10 @@ GEM
       rspec (~> 2.0)
       rspec-instafail (~> 0.2.0)
       ruby-progressbar (~> 1.0)
+    globalize (4.0.0.alpha.1)
+      activemodel (>= 4.0.0)
+      activerecord (>= 4.0.0)
+      paper_trail (~> 3.0.0.beta)
     growl (1.0.3)
     guard (2.0.5)
       formatador (>= 0.2.4)
@@ -192,6 +179,8 @@ GEM
     multi_json (1.8.1)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    paper_trail (3.0.0.beta1)
+      activerecord (>= 3.0, < 5.0)
     pg (0.17.0)
     polyglot (0.3.3)
     pry (0.9.12.2)
@@ -355,7 +344,7 @@ DEPENDENCIES
   figaro (= 0.7.0)
   font-awesome-sass-rails (= 3.0.2.2)
   fuubar (= 1.2.1)
-  globalize3!
+  globalize (= 4.0.0.alpha.1)
   growl (= 1.0.3)
   guard-rspec (= 3.0.3)
   guard-spork (= 1.5.1)
@@ -366,7 +355,6 @@ DEPENDENCIES
   jquery-rails (= 3.0.4)
   launchy (= 2.3.0)
   meta_request (= 0.2.8)
-  paper_trail!
   pg (= 0.17.0)
   rails (= 4.0.0)
   rails-footnotes (= 3.7.9)

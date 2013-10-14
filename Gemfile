@@ -46,9 +46,7 @@ gem 'rails-i18n', '4.0.0'
 gem 'faker', '1.2.0'
 # i18n for database content
 # gem 'globalize3', '0.3.0'
-gem 'globalize3', github: 'svenfuchs/globalize3', branch: 'rails4'
-# Override globalize dependency that has a dependency on Rails 3
-gem 'paper_trail', github: 'airblade/paper_trail'
+gem 'globalize', '4.0.0.alpha.1'
 # Switch away from WEBrick
 gem 'unicorn', '4.6.3'
 # Use to find missing/unused translations
