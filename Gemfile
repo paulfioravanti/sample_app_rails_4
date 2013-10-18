@@ -6,7 +6,7 @@ gem 'rails', '4.0.0'
 # Postgres as database for Active Record
 gem 'pg', '0.17.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '4.0.0'
+gem 'sass-rails', '4.0.1'
 # Twitter frameworks to make nice UI design elements
 gem 'bootstrap-sass', '2.3.2.2'
 # will_paginate pagination for Bootstrap
@@ -18,7 +18,7 @@ gem 'simple_form', '3.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.2.1'
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '4.0.0'
+gem 'coffee-rails', '4.0.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '3.0.4'
 # Speed up application links
@@ -52,7 +52,7 @@ gem 'unicorn', '4.6.3'
 # Use to find missing/unused translations
 gem 'i18n-tasks', '0.1.2'
 # Error tracking
-gem 'rollbar', '0.11.2'
+gem 'rollbar', '0.11.5'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -65,7 +65,7 @@ group :development do
   # Security checking
   gem 'brakeman', '2.1.2'
   # Code quality
-  gem 'reek', '1.3.3'
+  gem 'reek', '1.3.4'
   gem 'rails_best_practices', '1.14.4'
   # Query optimization monitoring
   gem 'bullet', '4.6.0'
@@ -83,7 +83,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '2.14.0'
   # for autotesting with rspec
-  gem 'guard-rspec', '3.0.3'
+  gem 'guard-rspec', '4.0.3'
   # Prettier RSpec output
   gem 'fuubar', '1.2.1'
 end
