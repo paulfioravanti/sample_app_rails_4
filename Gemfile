@@ -50,7 +50,7 @@ gem 'globalize', '4.0.0.alpha.2'
 # Switch away from WEBrick
 gem 'unicorn', '4.6.3'
 # Use to find missing/unused translations
-# gem 'i18n-tasks', github: 'glebm/i18n-tasks'
+gem 'i18n-tasks', '0.1.5'
 # Error tracking
 gem 'rollbar', '0.11.7'
 

@@ -139,6 +139,10 @@ GEM
     i18n (0.6.5)
     i18n-js (2.1.2)
       i18n
+    i18n-tasks (0.1.5)
+      rails
+      rake
+      term-ansicolor
     jbuilder (1.5.2)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -345,6 +349,7 @@ DEPENDENCIES
   guard-spork (= 1.5.1)
   haml-rails (= 0.4.0)
   i18n-js (= 2.1.2)
+  i18n-tasks (= 0.1.5)
   jbuilder (= 1.5.2)
   jquery-rails (= 3.0.4)
   launchy (= 2.3.0)
