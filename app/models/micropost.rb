@@ -22,7 +22,7 @@ class Micropost < ActiveRecord::Base
 
   validates :user, presence: true
   validates :content, presence: true, length: { maximum: 140 }
-  after_validation :report_validation_errors_to_rollbar
+  # after_validation :report_validation_errors_to_rollbar
 
   def self.from_users_actively_followed_by(user)
     followed_users = Relationship.with_users_actively_followed_by(user).to_sql
