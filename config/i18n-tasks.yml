@@ -1,0 +1,4 @@
+data:
+  paths:
+    - 'config/locales/**/*.%{locale}.yml'
+    # - 'config/locales/*.%{locale}.yml'
