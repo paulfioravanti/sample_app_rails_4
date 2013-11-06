@@ -2,13 +2,13 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Edge Rails: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.1'
 # Postgres as database for Active Record
 gem 'pg', '0.17.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.1'
 # Twitter frameworks to make nice UI design elements
-gem 'bootstrap-sass', '2.3.2.2'
+gem 'bootstrap-sass', '3.0.0.0'
 # will_paginate pagination for Bootstrap
 gem 'bootstrap-will_paginate', '0.0.10'
 # Font Awesome icons
@@ -28,7 +28,7 @@ gem 'turbolinks', '1.3.0'
 # Build JSON APIs with ease
 gem 'jbuilder', '1.5.2'
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '3.0.1', require: false
+gem 'bcrypt-ruby', '3.1.2', require: false
 # App secret key configuration
 gem 'figaro', '0.7.0'
 # Substiture ERb for Haml
@@ -46,13 +46,13 @@ gem 'rails-i18n', '4.0.0'
 gem 'faker', '1.2.0'
 # i18n for database content
 # gem 'globalize3', '0.3.0'
-gem 'globalize', '4.0.0.alpha.1'
+gem 'globalize', '4.0.0.alpha.2'
 # Switch away from WEBrick
 gem 'unicorn', '4.6.3'
 # Use to find missing/unused translations
-gem 'i18n-tasks', '0.1.2'
+# gem 'i18n-tasks', github: 'glebm/i18n-tasks'
 # Error tracking
-gem 'rollbar', '0.11.5'
+gem 'rollbar', '0.11.7'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -63,12 +63,12 @@ group :development do
   # for annotating model files with their properties
   gem 'annotate', '2.5.0'
   # Security checking
-  gem 'brakeman', '2.1.2'
+  gem 'brakeman', '2.2.0'
   # Code quality
   gem 'reek', '1.3.4'
   gem 'rails_best_practices', '1.14.4'
   # Query optimization monitoring
-  gem 'bullet', '4.6.0'
+  gem 'bullet', '4.7.1'
   # Debugging information
   gem 'rails-footnotes', '3.7.9'
   # Better error pages
@@ -92,7 +92,7 @@ group :test do
   # Helps in testing by simulating how a real user would use app
   gem 'capybara', '2.1.0'
   # Use factories instead of ActiveRecord objects
-  gem 'factory_girl_rails', '4.2.1'
+  gem 'factory_girl_rails', '4.3.0'
   # English-like matchers for unit-testing
   gem 'shoulda-matchers', '2.4.0'
   gem 'database_cleaner', '1.2.0'
