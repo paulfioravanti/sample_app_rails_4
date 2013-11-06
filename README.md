@@ -161,3 +161,6 @@ I haven't yet been able to get the following functionality that worked in Rails 
 </a>
 
 [![endorse](http://api.coderwall.com/pfioravanti/endorsecount.png)](http://coderwall.com/pfioravanti)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/paulfioravanti/sample_app_rails_4/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
