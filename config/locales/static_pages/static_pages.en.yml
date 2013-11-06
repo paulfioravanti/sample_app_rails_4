@@ -6,8 +6,6 @@ en:
       contact: Contact
     help:
       help: Help
-    home:
-      post: Post
     home_not_signed_in:
       sign_up: Sign up now!
     home_signed_in:

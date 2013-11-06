@@ -3,4 +3,4 @@ en:
     micropost:
       time_posted_prefix: Posted
       time_posted_suffix: ago
-      time_posted_ago: Posted %{time} ago.
+      # time_posted_ago: Posted %{time} ago.

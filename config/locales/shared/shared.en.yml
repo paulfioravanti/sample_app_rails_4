@@ -11,7 +11,7 @@ en:
     feed_item:
       time_posted_prefix: Posted
       time_posted_suffix: ''
-      time_posted_ago: Posted %{time} ago.
+      # time_posted_ago: Posted %{time} ago.
     micropost_form:
       characters_remaining:
         one: ! '%{count} character remaining.'

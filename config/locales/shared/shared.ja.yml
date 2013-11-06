@@ -11,7 +11,7 @@ ja:
     feed_item:
       time_posted_prefix: ''
       time_posted_suffix: に投稿された。
-      time_posted_ago: ! '%{time}前に投稿された。'
+      # time_posted_ago: ! '%{time}前に投稿された。'
     micropost_form:
       characters_remaining:
         one: ! '%{count}つの入力可能な文字が残る。'

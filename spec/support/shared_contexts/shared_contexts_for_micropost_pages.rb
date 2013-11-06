@@ -1,7 +1,7 @@
 shared_context "micropost creation" do |locale|
   include_context "sign in a user", locale
   given(:translations)         { Micropost.translation_class }
-  given(:post)                 { t('static_pages.home.post') }
+  given(:post)                 { t('shared.micropost_form.post') }
   given(:clicking_post_button) { -> { click_button post } }
   given(:micropost_content)    { 'micropost_content' }
   given(:new_micropost)        { "Lorem Ipsum Test" }

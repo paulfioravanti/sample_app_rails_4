@@ -1,5 +1,0 @@
-it:
-  helpers:
-    submit:
-      user:
-        create: Crea Utente

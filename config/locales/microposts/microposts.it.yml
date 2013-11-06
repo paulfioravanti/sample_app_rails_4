@@ -3,4 +3,4 @@ it:
     micropost:
       time_posted_prefix: Pubblicato
       time_posted_suffix: fa
-      time_posted_ago: Pubblicato %{time} fa.
+      # time_posted_ago: Pubblicato %{time} fa.

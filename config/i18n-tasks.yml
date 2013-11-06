@@ -1,4 +1,50 @@
 data:
   paths:
     - 'config/locales/**/*.%{locale}.yml'
-    # - 'config/locales/*.%{locale}.yml'
+grep:
+  paths:
+    - 'app/'
+    - 'lib/'
+  include:
+    - '*.rb'
+    - '*.html*'
+    - '*.js*'
+ignore_missing:
+  en:
+    - flash # needing to ignore this is probably a i18n-tasks bug
+    - shared.feed_item.time_posted_suffix
+  ja:
+    - microposts.micropost.time_posted_prefix
+    - shared.feed_item.time_posted_prefix
+ignore_eq_base:
+  it:
+    - activerecord.attributes.user.email
+    - activerecord.attributes.user.password
+    - activerecord.attributes.user.password_digest
+    - activerecord.models.micropost
+    - layouts.footer.rails_tutorial
+    - layouts.header.home
+    - layouts.account_dropdown.account
+    - sessions.new.email
+    - sessions.new.password
+    - static_pages.home.post
+    - shared.feed_item.time_posted_suffix
+    - shared.micropost_form.post
+    - shared.stats.following
+    - shared.user_info.microposts.one
+    - static_pages.home.post
+    - users.follow.follow
+    - users.show.microposts.one
+    - users.show.microposts.other
+    - users.show_follow.followers
+    - users.show_follow.following
+    - users.show_follow.microposts
+    - users.unfollow.unfollow
+ignore_unused:
+  - layouts.locale_selector.language_labels
+  - shared.micropost_form
+  - activerecord
+  - faker
+  - will_paginate
+ignore:
+  - simple_form
