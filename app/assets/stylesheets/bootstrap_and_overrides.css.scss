@@ -54,7 +54,7 @@ h1 {
 h2 {
   @include heading(1.7em);
   font-weight: normal;
-  color: $gray-light;
+  color: $grayLight;
 }
 
 p {
@@ -68,7 +68,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: $gray-light;
+  color: $grayLight;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -85,7 +85,7 @@ p {
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $gray-lighter;
+    border-top: 1px solid $grayLighter;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -110,7 +110,7 @@ aside {
   a {
     float: left;
     padding: 0 10px;
-    border-left: 1px solid $gray-lighter;
+    border-left: 1px solid $grayLighter;
     color: gray;
     &:first-child {
       padding-left: 0;
@@ -163,12 +163,12 @@ textarea, select, .uneditable-input {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
   a {
     color: $gray;
     &:hover {
-      color: $gray-darker;
+      color: $grayDarker;
     }
   }
   small {
@@ -201,7 +201,7 @@ footer {
 }
 
 .timestamp {
-  color: $gray-light;
+  color: $grayLight;
 }
 
 .gravatar {
@@ -220,7 +220,7 @@ aside {
 
 .countdown {
   display: inline;
-  color: $gray-light;
+  color: $grayLight;
   float: right;
 }
 

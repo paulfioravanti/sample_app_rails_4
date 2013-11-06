@@ -8,7 +8,7 @@ gem 'pg', '0.17.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.1'
 # Twitter frameworks to make nice UI design elements
-gem 'bootstrap-sass', '3.0.0.0'
+gem 'bootstrap-sass', '2.3.2.0'
 # will_paginate pagination for Bootstrap
 gem 'bootstrap-will_paginate', '0.0.10'
 # Font Awesome icons
