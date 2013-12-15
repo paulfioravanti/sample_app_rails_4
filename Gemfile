@@ -8,31 +8,31 @@ gem 'pg', '0.17.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.1'
 # Twitter frameworks to make nice UI design elements
-gem 'bootstrap-sass', '2.3.2.0'
+gem 'bootstrap-sass', '3.0.3.0'
 # will_paginate pagination for Bootstrap
 gem 'bootstrap-will_paginate', '0.0.10'
 # Font Awesome icons
 gem 'font-awesome-sass-rails', '3.0.2.2'
 # Simplified forms
-gem 'simple_form', '3.0.0'
+gem 'simple_form', '3.0.1'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '2.2.1'
+gem 'uglifier', '2.3.3'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.0.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '3.0.4'
 # Speed up application links
-gem 'turbolinks', '1.3.0'
+gem 'turbolinks', '2.0.0'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
-gem 'jbuilder', '1.5.2'
+gem 'jbuilder', '1.5.3'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2', require: false
 # App secret key configuration
 gem 'figaro', '0.7.0'
 # Substiture ERb for Haml
-gem 'haml-rails', '0.4.0'
+gem 'haml-rails', '0.5.2'
 # Use of Markdown for static content in views
 gem 'rdiscount', '2.1.7'
 # For JQuery timeago library
@@ -50,9 +50,9 @@ gem 'globalize', '4.0.0.alpha.2'
 # Switch away from WEBrick
 gem 'unicorn', '4.6.3'
 # Use to find missing/unused translations
-gem 'i18n-tasks', '0.1.5'
+gem 'i18n-tasks', '0.2.13'
 # Error tracking
-gem 'rollbar', '0.11.7'
+gem 'rollbar', '0.12.1'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -61,9 +61,9 @@ end
 
 group :development do
   # for annotating model files with their properties
-  gem 'annotate', '2.5.0'
+  gem 'annotate', '2.6.0'
   # Security checking
-  gem 'brakeman', '2.2.0'
+  gem 'brakeman', '2.3.1'
   # Code quality
   gem 'reek', '1.3.4'
   gem 'rails_best_practices', '1.14.4'
@@ -83,14 +83,14 @@ end
 group :development, :test do
   gem 'rspec-rails', '2.14.0'
   # for autotesting with rspec
-  gem 'guard-rspec', '4.0.3'
+  gem 'guard-rspec', '4.2.0'
   # Prettier RSpec output
   gem 'fuubar', '1.2.1'
 end
 
 group :test do
   # Helps in testing by simulating how a real user would use app
-  gem 'capybara', '2.1.0'
+  gem 'capybara', '2.2.0'
   # Use factories instead of ActiveRecord objects
   gem 'factory_girl_rails', '4.3.0'
   # English-like matchers for unit-testing
@@ -101,12 +101,12 @@ group :test do
   # guard/spork integration
   gem 'guard-spork', '1.5.1'
   # Helps in debugging tests by being able to launch browser
-  gem 'launchy', '2.3.0'
+  gem 'launchy', '2.4.2'
   # Mac-dependent gems for Guard notifications
   gem 'rb-fsevent', '0.9.3', require: false
   gem 'growl', '1.0.3'
   # Code coverage reports
-  gem 'simplecov', '0.7.1', require: false
+  gem 'simplecov', '0.8.2', require: false
   gem 'coveralls', '0.7.0', require: false
 end
 
