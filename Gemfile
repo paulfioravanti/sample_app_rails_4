@@ -48,7 +48,7 @@ gem 'faker', '1.2.0'
 # gem 'globalize3', '0.3.0'
 gem 'globalize', '4.0.0.alpha.2'
 # Switch away from WEBrick
-gem 'unicorn', '4.6.3'
+gem 'unicorn', '4.7.0'
 # Use to find missing/unused translations
 gem 'i18n-tasks', '0.2.13'
 # Error tracking
