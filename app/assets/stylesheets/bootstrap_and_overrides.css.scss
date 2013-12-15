@@ -2,6 +2,11 @@
 // Font Awesome - http://fortawesome.github.com/Font-Awesome
 @import "font-awesome";
 
+// prepare variables for migration to Bootstrap 3
+$gray-light: $grayLight;
+$gray-lighter: $grayLighter;
+$gray-darker: $grayDarker;
+
 /* Variables, mixins, etc. */
 
 $gray-medium-light: hsl(0, 0%, 92%);
