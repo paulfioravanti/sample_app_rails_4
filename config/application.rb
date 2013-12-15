@@ -24,6 +24,7 @@ module SampleAppRails4
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
     # Load all locale files under the config/locales directory
+    config.i18n.enforce_available_locales = true
     config.i18n.load_path +=
       Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
 
