@@ -4,7 +4,7 @@ ruby '2.0.0'
 # Edge Rails: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 # Postgres as database for Active Record
-gem 'pg', '0.17.0'
+gem 'pg', '0.17.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.1'
 # Twitter frameworks to make nice UI design elements
@@ -16,7 +16,7 @@ gem 'font-awesome-sass-rails', '3.0.2.2'
 # Simplified forms
 gem 'simple_form', '3.0.1'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '2.3.3'
+gem 'uglifier', '2.4.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.0.1'
 # Use jquery as the JavaScript library
@@ -26,13 +26,13 @@ gem 'turbolinks', '2.0.0'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
-gem 'jbuilder', '1.5.3'
+gem 'jbuilder', '2.0.2'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2', require: false
 # App secret key configuration
 gem 'figaro', '0.7.0'
 # Substiture ERb for Haml
-gem 'haml-rails', '0.5.2'
+gem 'haml-rails', '0.5.3'
 # Use of Markdown for static content in views
 gem 'rdiscount', '2.1.7'
 # For JQuery timeago library
@@ -41,7 +41,7 @@ gem 'rdiscount', '2.1.7'
 # For accessing i18n in js files
 gem 'i18n-js', '2.1.2'
 # i18n strings for default Rails
-gem 'rails-i18n', '4.0.0'
+gem 'rails-i18n', '4.0.1'
 # For fake example users with “realistic” names/emails
 gem 'faker', '1.2.0'
 # i18n for database content
@@ -50,29 +50,29 @@ gem 'globalize', '4.0.0.alpha.2'
 # Switch away from WEBrick
 gem 'unicorn', '4.7.0'
 # Use to find missing/unused translations
-gem 'i18n-tasks', '0.2.13'
+gem 'i18n-tasks', '0.2.14'
 # Error tracking
 gem 'rollbar', '0.12.1'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', '0.3.20', require: false
+  gem 'sdoc', '0.4.0.rc.1', require: false
 end
 
 group :development do
   # for annotating model files with their properties
-  gem 'annotate', '2.6.0'
+  gem 'annotate', '2.6.1'
   # Security checking
   gem 'brakeman', '2.3.1'
   # Code quality
-  gem 'reek', '1.3.4'
+  gem 'reek', '1.3.6'
   gem 'rails_best_practices', '1.14.4'
   # Query optimization monitoring
   gem 'bullet', '4.7.1'
   # Debugging information
   gem 'rails-footnotes', '3.7.9'
   # Better error pages
-  gem 'better_errors', '1.0.1'
+  gem 'better_errors', '1.1.0'
   gem 'binding_of_caller', '0.7.2'
   # Gem for RailsPanel Chrome extension
   gem 'meta_request', '0.2.8'
@@ -83,9 +83,9 @@ end
 group :development, :test do
   gem 'rspec-rails', '2.14.0'
   # for autotesting with rspec
-  gem 'guard-rspec', '4.2.0'
+  gem 'guard-rspec', '4.2.3'
   # Prettier RSpec output
-  gem 'fuubar', '1.2.1'
+  gem 'fuubar', '1.3.2'
 end
 
 group :test do
@@ -103,7 +103,7 @@ group :test do
   # Helps in debugging tests by being able to launch browser
   gem 'launchy', '2.4.2'
   # Mac-dependent gems for Guard notifications
-  gem 'rb-fsevent', '0.9.3', require: false
+  gem 'rb-fsevent', '0.9.4', require: false
   gem 'growl', '1.0.3'
   # Code coverage reports
   gem 'simplecov', '0.8.2', require: false
