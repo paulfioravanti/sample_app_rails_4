@@ -22,7 +22,7 @@ gem 'coffee-rails', '4.0.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '3.0.4'
 # Speed up application links
-gem 'turbolinks', '2.0.0'
+gem 'turbolinks', '2.1.0'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
@@ -81,7 +81,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '2.14.0'
+  gem 'rspec-rails', '2.14.1'
   # for autotesting with rspec
   gem 'guard-rspec', '4.2.3'
   # Prettier RSpec output
