@@ -50,7 +50,7 @@ gem 'globalize', '4.0.0.alpha.2'
 # Switch away from WEBrick
 gem 'unicorn', '4.7.0'
 # Use to find missing/unused translations
-gem 'i18n-tasks', '0.2.14'
+gem 'i18n-tasks', '0.2.15'
 # Error tracking
 gem 'rollbar', '0.12.1'
 
@@ -90,7 +90,7 @@ end
 
 group :test do
   # Helps in testing by simulating how a real user would use app
-  gem 'capybara', '2.2.0'
+  gem 'capybara', '2.2.1'
   # Use factories instead of ActiveRecord objects
   gem 'factory_girl_rails', '4.3.0'
   # English-like matchers for unit-testing
