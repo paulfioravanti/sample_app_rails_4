@@ -22,7 +22,7 @@ gem 'coffee-rails', '4.0.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '3.0.4'
 # Speed up application links
-gem 'turbolinks', '2.1.0'
+gem 'turbolinks', '2.2.0'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
@@ -48,15 +48,15 @@ gem 'faker', '1.2.0'
 # gem 'globalize3', '0.3.0'
 gem 'globalize', '4.0.0.alpha.2'
 # Switch away from WEBrick
-gem 'unicorn', '4.7.0'
+gem 'unicorn', '4.8.0'
 # Use to find missing/unused translations
 gem 'i18n-tasks', '0.2.15'
 # Error tracking
-gem 'rollbar', '0.12.1'
+gem 'rollbar', '0.12.6'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', '0.4.0.rc.1', require: false
+  gem 'sdoc', '0.4.0', require: false
 end
 
 group :development do
@@ -83,7 +83,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '2.14.1'
   # for autotesting with rspec
-  gem 'guard-rspec', '4.2.3'
+  gem 'guard-rspec', '4.2.4'
   # Prettier RSpec output
   gem 'fuubar', '1.3.2'
 end
@@ -94,7 +94,7 @@ group :test do
   # Use factories instead of ActiveRecord objects
   gem 'factory_girl_rails', '4.3.0'
   # English-like matchers for unit-testing
-  gem 'shoulda-matchers', '2.4.0'
+  gem 'shoulda-matchers', '2.5.0'
   gem 'database_cleaner', '1.2.0'
   # Speed up test server
   gem 'spork-rails', '4.0.0'
