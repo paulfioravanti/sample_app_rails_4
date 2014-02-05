@@ -20,9 +20,9 @@ gem 'uglifier', '2.4.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.0.1'
 # Use jquery as the JavaScript library
-gem 'jquery-rails', '3.0.4'
+gem 'jquery-rails', '3.1.0'
 # Speed up application links
-gem 'turbolinks', '2.2.0'
+gem 'turbolinks', '2.2.1'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
@@ -46,13 +46,13 @@ gem 'rails-i18n', '4.0.1'
 gem 'faker', '1.2.0'
 # i18n for database content
 # gem 'globalize3', '0.3.0'
-gem 'globalize', '4.0.0.alpha.2'
+gem 'globalize', '4.0.0'
 # Switch away from WEBrick
-gem 'unicorn', '4.8.0'
+gem 'unicorn', '4.8.1'
 # Use to find missing/unused translations
-gem 'i18n-tasks', '0.2.18'
+gem 'i18n-tasks', '0.2.19'
 # Error tracking
-gem 'rollbar', '0.12.9'
+gem 'rollbar', '0.12.10'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -66,7 +66,7 @@ group :development do
   gem 'brakeman', '2.3.1'
   # Code quality
   gem 'reek', '1.3.6'
-  gem 'rails_best_practices', '1.14.4'
+  gem 'rails_best_practices', '1.15.1'
   # Query optimization monitoring
   gem 'bullet', '4.7.1'
   # Debugging information
