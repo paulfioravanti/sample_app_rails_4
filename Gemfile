@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Edge Rails: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.2'
+gem 'rails', '4.0.3'
 # Postgres as database for Active Record
 gem 'pg', '0.17.1'
 # Use SCSS for stylesheets
@@ -48,11 +48,11 @@ gem 'faker', '1.2.0'
 # gem 'globalize3', '0.3.0'
 gem 'globalize', '4.0.0'
 # Switch away from WEBrick
-gem 'unicorn', '4.8.1'
+gem 'unicorn', '4.8.2'
 # Use to find missing/unused translations
 gem 'i18n-tasks', '0.2.19'
 # Error tracking
-gem 'rollbar', '0.12.10'
+gem 'rollbar', '0.12.12'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -63,12 +63,12 @@ group :development do
   # for annotating model files with their properties
   gem 'annotate', '2.6.1'
   # Security checking
-  gem 'brakeman', '2.3.1'
+  gem 'brakeman', '2.4.1'
   # Code quality
   gem 'reek', '1.3.6'
   gem 'rails_best_practices', '1.15.1'
   # Query optimization monitoring
-  gem 'bullet', '4.7.1'
+  gem 'bullet', '4.8.0'
   # Debugging information
   gem 'rails-footnotes', '3.7.9'
   # Better error pages
@@ -83,7 +83,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '2.14.1'
   # for autotesting with rspec
-  gem 'guard-rspec', '4.2.6'
+  gem 'guard-rspec', '4.2.7'
   # Prettier RSpec output
   gem 'fuubar', '1.3.2'
 end
@@ -92,7 +92,7 @@ group :test do
   # Helps in testing by simulating how a real user would use app
   gem 'capybara', '2.2.1'
   # Use factories instead of ActiveRecord objects
-  gem 'factory_girl_rails', '4.3.0'
+  gem 'factory_girl_rails', '4.4.0'
   # English-like matchers for unit-testing
   gem 'shoulda-matchers', '2.5.0'
   gem 'database_cleaner', '1.2.0'
