@@ -26,7 +26,7 @@ gem 'turbolinks', '2.2.1'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
-gem 'jbuilder', '2.0.2'
+gem 'jbuilder', '2.0.3'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2', require: false
 # App secret key configuration
@@ -50,7 +50,7 @@ gem 'globalize', '4.0.0'
 # Switch away from WEBrick
 gem 'unicorn', '4.8.2'
 # Use to find missing/unused translations
-gem 'i18n-tasks', '0.2.19'
+gem 'i18n-tasks', '0.2.21'
 # Error tracking
 gem 'rollbar', '0.12.12'
 

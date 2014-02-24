@@ -146,7 +146,7 @@ GEM
     i18n (0.6.9)
     i18n-js (2.1.2)
       i18n
-    i18n-tasks (0.2.19)
+    i18n-tasks (0.2.21)
       activesupport
       easy_translate (>= 0.4.0)
       erubis
@@ -154,7 +154,7 @@ GEM
       rake
       term-ansicolor
       terminal-table
-    jbuilder (2.0.2)
+    jbuilder (2.0.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
     jquery-rails (3.1.0)
@@ -361,8 +361,8 @@ DEPENDENCIES
   guard-spork (= 1.5.1)
   haml-rails (= 0.5.3)
   i18n-js (= 2.1.2)
-  i18n-tasks (= 0.2.19)
-  jbuilder (= 2.0.2)
+  i18n-tasks (= 0.2.21)
+  jbuilder (= 2.0.3)
   jquery-rails (= 3.1.0)
   launchy (= 2.4.2)
   meta_request (= 0.2.8)
