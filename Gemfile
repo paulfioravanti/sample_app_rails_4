@@ -43,14 +43,14 @@ gem 'i18n-js', '2.1.2'
 # i18n strings for default Rails
 gem 'rails-i18n', '4.0.1'
 # For fake example users with “realistic” names/emails
-gem 'faker', '1.2.0'
+gem 'faker', '1.3.0'
 # i18n for database content
 # gem 'globalize3', '0.3.0'
 gem 'globalize', '4.0.0'
 # Switch away from WEBrick
 gem 'unicorn', '4.8.2'
 # Use to find missing/unused translations
-gem 'i18n-tasks', '0.2.21'
+gem 'i18n-tasks', '0.3.1'
 # Error tracking
 gem 'rollbar', '0.12.12'
 
@@ -83,7 +83,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '2.14.1'
   # for autotesting with rspec
-  gem 'guard-rspec', '4.2.7'
+  gem 'guard-rspec', '4.2.8'
   # Prettier RSpec output
   gem 'fuubar', '1.3.2'
 end
