@@ -66,7 +66,7 @@ group :development do
   gem 'brakeman', '2.4.1'
   # Code quality
   gem 'reek', '1.3.6'
-  gem 'rails_best_practices', '1.15.1'
+  gem 'rails_best_practices', '1.15.2'
   # Query optimization monitoring
   gem 'bullet', '4.8.0'
   # Debugging information
