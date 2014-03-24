@@ -6,7 +6,7 @@ gem 'rails', '4.0.3'
 # Postgres as database for Active Record
 gem 'pg', '0.17.1'
 # Use SCSS for stylesheets
-gem 'sass-rails', '4.0.1'
+gem 'sass-rails', '4.0.2'
 # Twitter frameworks to make nice UI design elements
 gem 'bootstrap-sass', '2.3.2.2'
 # will_paginate pagination for Bootstrap
@@ -26,7 +26,7 @@ gem 'turbolinks', '2.2.1'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
-gem 'jbuilder', '2.0.3'
+gem 'jbuilder', '2.0.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2', require: false
 # App secret key configuration
@@ -63,7 +63,7 @@ group :development do
   # for annotating model files with their properties
   gem 'annotate', '2.6.1'
   # Security checking
-  gem 'brakeman', '2.4.1'
+  gem 'brakeman', '2.4.3'
   # Code quality
   gem 'reek', '1.3.6'
   gem 'rails_best_practices', '1.15.2'
@@ -81,7 +81,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '2.14.1'
+  gem 'rspec-rails', '2.14.2'
   # for autotesting with rspec
   gem 'guard-rspec', '4.2.8'
   # Prettier RSpec output
