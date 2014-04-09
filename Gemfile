@@ -45,8 +45,7 @@ gem 'rails-i18n', '4.0.1'
 # For fake example users with “realistic” names/emails
 gem 'faker', '1.3.0'
 # i18n for database content
-# gem 'globalize3', '0.3.0'
-gem 'globalize', '4.0.0'
+gem 'globalize', '4.0.1'
 # Switch away from WEBrick
 gem 'unicorn', '4.8.2'
 # Use to find missing/unused translations
@@ -61,7 +60,7 @@ end
 
 group :development do
   # for annotating model files with their properties
-  gem 'annotate', '2.6.1'
+  gem 'annotate', '2.6.3'
   # Security checking
   gem 'brakeman', '2.4.3'
   # Code quality
