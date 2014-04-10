@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Edge Rails: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.3'
+gem 'rails', '4.1.0'
 # Postgres as database for Active Record
 gem 'pg', '0.17.1'
 # Use SCSS for stylesheets
@@ -14,7 +14,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 # Font Awesome icons
 gem 'font-awesome-sass-rails', '3.0.2.2'
 # Simplified forms
-gem 'simple_form', '3.0.1'
+gem 'simple_form', '3.0.2'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.4.0'
 # Use CoffeeScript for .js.coffee assets and views
