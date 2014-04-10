@@ -34,6 +34,10 @@ env:
       piNXu+CWWoAFV2E/C4E49aTezsKH7hHO+UUuozyyp2TAAQwP7OjiJFt2XdGh
       GbK+w2E/iALf0ftW1d89qSuBgunrF5VSKkeO2wdBQEdWmDUgjHc=
   - secure: |-
+      U/L5Pb5+ti4EOJlbXUO62pnjB9wHTtot0f295mILIHoqJv+/QL6eT3DZJpFk
+      0pi/7jquJd9MbU5Ik2cPf3PrpvqcRKqLmeZ1heS8C0TW1lEtbcovLtCPq+BB
+      GNI7ctTWaTVRJE/usE4c6oyXuly8K5T1dvi4qbXVPlupWHAM4sM=
+  - secure: |-
       On6nU1dLy9Z/cW9DCjz5H29xl1O3wMllsQWo0ux34jpJr6O7WMKZNlp+A6+C
       yd+btt7r5BwofZVwOUr8pGTk2ec00krfaNX9sOgkhSohB5XDmBn9JBQffMO9
       qzIXVBq3J+X5dgXCZqkeZgcv2R+ocG6eQPBkhKXYHEjuuACtC28=
@@ -41,7 +45,6 @@ env:
       QY+iRat9cjaIMSai1ihoV3/3lEGf6Mf0Q2YGRS4cALYnbgessD9FjPuuo7aR
       qZRAJkX/N1BbHMCeMaFpJHLn80fZMvdKZH8xfpFzGeCgN60Rib8D1xvYXc6s
       /RuydqzeqjLauIr1+R9udEfIWHPcpGuuo+qOpuJoEuvyNzfhU3s=
-  - secure: U/L5Pb5+ti4EOJlbXUO62pnjB9wHTtot0f295mILIHoqJv+/QL6eT3DZJpFk0pi/7jquJd9MbU5Ik2cPf3PrpvqcRKqLmeZ1heS8C0TW1lEtbcovLtCPq+BBGNI7ctTWaTVRJE/usE4c6oyXuly8K5T1dvi4qbXVPlupWHAM4sM=
 bundler_args: --without development
 before_script:
 - psql -c "create database $DB_NAME_TEST;" -U $DB_USER_TEST
