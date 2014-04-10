@@ -6,7 +6,7 @@ gem 'rails', '4.1.0'
 # Postgres as database for Active Record
 gem 'pg', '0.17.1'
 # Use SCSS for stylesheets
-gem 'sass-rails', '4.0.2'
+gem 'sass-rails', '4.0.3'
 # Twitter frameworks to make nice UI design elements
 gem 'bootstrap-sass', '2.3.2.2'
 # will_paginate pagination for Bootstrap
@@ -16,19 +16,19 @@ gem 'font-awesome-sass-rails', '3.0.2.2'
 # Simplified forms
 gem 'simple_form', '3.0.2'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '2.4.0'
+gem 'uglifier', '2.5.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.0.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '3.1.0'
 # Speed up application links
-gem 'turbolinks', '2.2.1'
+gem 'turbolinks', '2.2.2'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
-gem 'jbuilder', '2.0.5'
+gem 'jbuilder', '2.0.6'
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '3.1.2', require: false
+gem 'bcrypt', '3.1.7', require: false
 # App secret key configuration
 gem 'figaro', '0.7.0'
 # Substiture ERb for Haml
@@ -41,7 +41,7 @@ gem 'rdiscount', '2.1.7'
 # For accessing i18n in js files
 gem 'i18n-js', '2.1.2'
 # i18n strings for default Rails
-gem 'rails-i18n', '4.0.1'
+gem 'rails-i18n', '4.0.2'
 # For fake example users with “realistic” names/emails
 gem 'faker', '1.3.0'
 # i18n for database content
@@ -49,9 +49,9 @@ gem 'globalize', '4.0.1'
 # Switch away from WEBrick
 gem 'unicorn', '4.8.2'
 # Use to find missing/unused translations
-gem 'i18n-tasks', '0.3.1'
+gem 'i18n-tasks', '0.3.9'
 # Error tracking
-gem 'rollbar', '0.12.12'
+gem 'rollbar', '0.12.15'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -64,17 +64,17 @@ group :development do
   # Security checking
   gem 'brakeman', '2.4.3'
   # Code quality
-  gem 'reek', '1.3.6'
+  gem 'reek', '1.3.7'
   gem 'rails_best_practices', '1.15.2'
   # Query optimization monitoring
   gem 'bullet', '4.8.0'
   # Debugging information
-  gem 'rails-footnotes', '3.7.9'
+  gem 'rails-footnotes', '4.0.0'
   # Better error pages
   gem 'better_errors', '1.1.0'
   gem 'binding_of_caller', '0.7.2'
   # Gem for RailsPanel Chrome extension
-  gem 'meta_request', '0.2.8'
+  gem 'meta_request', '0.2.9'
   # Find unused routes and unreachable methods
   gem 'traceroute', '0.3.0'
 end
@@ -91,7 +91,7 @@ group :test do
   # Helps in testing by simulating how a real user would use app
   gem 'capybara', '2.2.1'
   # Use factories instead of ActiveRecord objects
-  gem 'factory_girl_rails', '4.4.0'
+  gem 'factory_girl_rails', '4.4.1'
   # English-like matchers for unit-testing
   gem 'shoulda-matchers', '2.5.0'
   gem 'database_cleaner', '1.2.0'
