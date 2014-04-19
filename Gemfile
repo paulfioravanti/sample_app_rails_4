@@ -51,7 +51,7 @@ gem 'unicorn', '4.8.2'
 # Use to find missing/unused translations
 gem 'i18n-tasks', '0.3.9'
 # Error tracking
-gem 'rollbar', '0.12.15'
+gem 'rollbar', '0.12.16'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
