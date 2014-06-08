@@ -62,7 +62,7 @@ group :development do
   # for annotating model files with their properties
   gem 'annotate', '2.6.3'
   # Security checking
-  gem 'brakeman', '2.4.3'
+  gem 'brakeman', '2.6.0'
   # Code quality
   gem 'reek', '1.3.7'
   gem 'rails_best_practices', '1.15.4'
