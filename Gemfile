@@ -84,7 +84,8 @@ group :development, :test do
   # for autotesting with rspec
   gem 'guard-rspec', '4.2.9'
   # Prettier RSpec output
-  # gem 'fuubar', '1.3.3'
+  gem 'fuubar', '1.3.3'
+  gem 'rspec-legacy_formatters' # until Foobar updates
 end
 
 group :test do
