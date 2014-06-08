@@ -19,7 +19,7 @@ end
 
 def create_microposts
   puts "Creating Microposts..."
-  users = User.all(limit: 6)
+  users = User.limit(6)
   users.each do |user|
     50.times do
       I18n.locale = :en
