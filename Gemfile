@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby File.read('.ruby-version').strip.split('-').last
 
 # Edge Rails: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
