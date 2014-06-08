@@ -93,7 +93,7 @@ group :test do
   # Use factories instead of ActiveRecord objects
   gem 'factory_girl_rails', '4.4.1'
   # English-like matchers for unit-testing
-  gem 'shoulda-matchers', '2.5.0'
+  gem 'shoulda-matchers', '2.6.1'
   gem 'database_cleaner', '1.2.0'
   # Speed up test server
   gem 'spork-rails', '4.0.0'
