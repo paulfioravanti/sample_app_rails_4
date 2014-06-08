@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 20120609091244) do
   enable_extension "plpgsql"
 
   create_table "micropost_translations", force: true do |t|
-    t.integer  "micropost_id"
-    t.string   "locale"
-    t.string   "content"
+    t.integer  "micropost_id", null: false
+    t.string   "locale",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "content"
   end
 
   add_index "micropost_translations", ["locale"], name: "index_micropost_translations_on_locale", using: :btree
