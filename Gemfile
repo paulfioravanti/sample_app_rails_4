@@ -80,11 +80,11 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '2.14.2'
+  gem 'rspec-rails', '3.0.1'
   # for autotesting with rspec
-  gem 'guard-rspec', '4.2.9'
+  # gem 'guard-rspec', '4.2.9'
   # Prettier RSpec output
-  gem 'fuubar', '1.3.3'
+  # gem 'fuubar', '1.3.3'
 end
 
 group :test do

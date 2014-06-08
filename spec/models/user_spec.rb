@@ -109,7 +109,7 @@ describe User do
 
     specify "with invalid password" do
       expect(user).to_not eq(unsuccessfully_authenticated_user)
-      expect(unsuccessfully_authenticated_user).to be_false
+      expect(unsuccessfully_authenticated_user).to be false
     end
   end
 
