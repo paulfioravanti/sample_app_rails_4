@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
   def show
     @microposts =
-      @user.microposts.by_descending_date.eagerly_paginate(page_param)
+      @user.microposts.by_descending_date.includes(:translations).paginate(page: page_param)
   end
 
   def new

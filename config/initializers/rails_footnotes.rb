@@ -1,14 +1,27 @@
-# if defined?(Footnotes) && Rails.env.development?
-#   Footnotes.run! # first of all
-#   Footnotes::Notes::LogNote::LoggingExtensions.module_eval do
-#     def add(*args, &block)
-#       super
-#       logged_message = args[2] + "\n"
-#       Footnotes::Notes::LogNote.log(logged_message)
-#       logged_message
-#     end
-#   end
+defined?(Footnotes) && Footnotes.setup do |f|
+  # Wether or not to enable footnotes
+  f.enabled = Rails.env.development?
+  # You can also use a lambda / proc to conditionally toggle footnotes
+  # Example :
+  # f.enabled = -> { User.current.admin? }
+  # Beware of thread-safety though, Footnotes.enabled is NOT thread safe
+  # and should not be modified anywhere else.
 
-#   # ... other init code
-#   Footnotes::Filter.prefix = 'subl://open?url=file://%s&line=%d&column=%d'
-# end
+  # Only toggle some notes :
+  # f.notes = [:session, :cookies, :params, :filters, :routes, :env, :queries, :log, :general]
+
+  # Change the prefix :
+  f.prefix = 'subl://open?url=file://%s&line=%d&column=%d'
+
+  # Disable style :
+  # f.no_style = true
+
+  # Lock notes to top right :
+  # f.lock_top_right = true
+
+  # Change font size :
+  # f.font_size = '11px'
+
+  # Allow to open multiple notes :
+  # f.multiple_notes = true
+end
