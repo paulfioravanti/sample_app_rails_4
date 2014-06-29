@@ -49,9 +49,9 @@ gem 'globalize', '4.0.1'
 # Switch away from WEBrick
 gem 'unicorn', '4.8.3'
 # Use to find missing/unused translations
-gem 'i18n-tasks', '0.4.1'
+gem 'i18n-tasks', '0.4.3'
 # Error tracking
-gem 'rollbar', '0.12.20'
+gem 'rollbar', '0.13.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -67,7 +67,7 @@ group :development do
   gem 'reek', '1.3.7'
   gem 'rails_best_practices', '1.15.4'
   # Query optimization monitoring
-  gem 'bullet', '4.10.0'
+  gem 'bullet', '4.11.2'
   # Debugging information
   gem 'rails-footnotes', '4.0.1'
   # Better error pages
