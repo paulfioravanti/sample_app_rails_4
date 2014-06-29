@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby File.read('.ruby-version').strip.split('-').last
 
 # Edge Rails: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.1'
+gem 'rails', '4.1.2'
 # Postgres as database for Active Record
 gem 'pg', '0.17.1'
 # Use SCSS for stylesheets
@@ -16,17 +16,17 @@ gem 'font-awesome-sass-rails', '3.0.2.2'
 # Simplified forms
 gem 'simple_form', '3.0.2'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '2.5.0'
+gem 'uglifier', '2.5.1'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.0.1'
 # Use jquery as the JavaScript library
-gem 'jquery-rails', '3.1.0'
+gem 'jquery-rails', '3.1.1'
 # Speed up application links
 gem 'turbolinks', '2.2.2'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
-gem 'jbuilder', '2.0.8'
+gem 'jbuilder', '2.1.1'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '3.1.7', require: false
 # App secret key configuration
@@ -45,11 +45,11 @@ gem 'rails-i18n', '4.0.2'
 # For fake example users with “realistic” names/emails
 gem 'faker', '1.3.0'
 # i18n for database content
-gem 'globalize', '4.0.1'
+gem 'globalize', '4.0.2'
 # Switch away from WEBrick
 gem 'unicorn', '4.8.3'
 # Use to find missing/unused translations
-gem 'i18n-tasks', '0.4.3'
+gem 'i18n-tasks', '0.5.1'
 # Error tracking
 gem 'rollbar', '0.13.0'
 
@@ -60,14 +60,14 @@ end
 
 group :development do
   # for annotating model files with their properties
-  gem 'annotate', '2.6.3'
+  gem 'annotate', '2.6.5'
   # Security checking
   gem 'brakeman', '2.6.0'
   # Code quality
   gem 'reek', '1.3.7'
   gem 'rails_best_practices', '1.15.4'
   # Query optimization monitoring
-  gem 'bullet', '4.11.2'
+  gem 'bullet', '4.11.3'
   # Debugging information
   gem 'rails-footnotes', '4.0.1'
   # Better error pages
@@ -82,7 +82,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '3.0.1'
   # for autotesting with rspec
-  gem 'guard-rspec', '4.2.9'
+  gem 'guard-rspec', '4.2.10'
   # Prettier RSpec output
   gem 'fuubar', '1.3.3'
   gem 'rspec-legacy_formatters' # until Foobar updates
