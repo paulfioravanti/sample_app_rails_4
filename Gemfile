@@ -26,7 +26,7 @@ gem 'turbolinks', '2.2.2'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
-gem 'jbuilder', '2.1.1'
+gem 'jbuilder', '2.1.2'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '3.1.7', require: false
 # App secret key configuration
@@ -43,15 +43,15 @@ gem 'i18n-js', '2.1.2'
 # i18n strings for default Rails
 gem 'rails-i18n', '4.0.2'
 # For fake example users with “realistic” names/emails
-gem 'faker', '1.3.0'
+gem 'faker', '1.4.1'
 # i18n for database content
 gem 'globalize', '4.0.2'
 # Switch away from WEBrick
 gem 'unicorn', '4.8.3'
 # Use to find missing/unused translations
-gem 'i18n-tasks', '0.5.1'
+gem 'i18n-tasks', '0.5.4'
 # Error tracking
-gem 'rollbar', '0.13.0'
+gem 'rollbar', '0.13.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -62,9 +62,9 @@ group :development do
   # for annotating model files with their properties
   gem 'annotate', '2.6.5'
   # Security checking
-  gem 'brakeman', '2.6.0'
+  gem 'brakeman', '2.6.1'
   # Code quality
-  gem 'reek', '1.3.7'
+  gem 'reek', '1.3.8'
   gem 'rails_best_practices', '1.15.4'
   # Query optimization monitoring
   gem 'bullet', '4.11.3'
@@ -74,9 +74,9 @@ group :development do
   gem 'better_errors', '1.1.0'
   gem 'binding_of_caller', '0.7.2'
   # Gem for RailsPanel Chrome extension
-  gem 'meta_request', '0.3.0'
+  gem 'meta_request', '0.3.3'
   # Find unused routes and unreachable methods
-  gem 'traceroute', '0.3.0'
+  gem 'traceroute', '0.4.0'
 end
 
 group :development, :test do
@@ -90,7 +90,7 @@ end
 
 group :test do
   # Helps in testing by simulating how a real user would use app
-  gem 'capybara', '2.3.0'
+  gem 'capybara', '2.4.1'
   # Use factories instead of ActiveRecord objects
   gem 'factory_girl_rails', '4.4.1'
   # English-like matchers for unit-testing
