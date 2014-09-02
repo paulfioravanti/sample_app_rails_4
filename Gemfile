@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby File.read('.ruby-version')
 
 # Edge Rails: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.4'
+gem 'rails', '4.1.5'
 # Postgres as database for Active Record
 gem 'pg', '0.17.1'
 # Use SCSS for stylesheets
@@ -71,7 +71,7 @@ group :development do
   # Debugging information
   gem 'rails-footnotes', '4.0.2'
   # Better error pages
-  gem 'better_errors', '1.1.0'
+  gem 'better_errors', '2.0.0'
   gem 'binding_of_caller', '0.7.2'
   # Gem for RailsPanel Chrome extension
   gem 'meta_request', '0.3.3'

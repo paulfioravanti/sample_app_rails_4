@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   include Localizeable, Authenticatable
-
   protect_from_forgery with: :exception
 
   # Every helper method dependent on url_for (e.g. helpers for named
