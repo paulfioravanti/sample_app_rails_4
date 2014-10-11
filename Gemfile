@@ -22,11 +22,11 @@ gem 'coffee-rails', '4.0.1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '3.1.2'
 # Speed up application links
-gem 'turbolinks', '2.3.0'
+gem 'turbolinks', '2.4.0'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
-gem 'jbuilder', '2.1.3'
+gem 'jbuilder', '2.2.2'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '3.1.7', require: false
 # App secret key configuration
@@ -51,7 +51,7 @@ gem 'unicorn', '4.8.3'
 # Use to find missing/unused translations
 gem 'i18n-tasks', '0.7.7'
 # Error tracking
-gem 'rollbar', '1.0.1'
+gem 'rollbar', '1.1.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
