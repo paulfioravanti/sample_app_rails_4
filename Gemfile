@@ -18,7 +18,7 @@ gem 'simple_form', '3.0.2'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.5.3'
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '4.0.1'
+gem 'coffee-rails', '4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '3.1.2'
 # Speed up application links
