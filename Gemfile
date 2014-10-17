@@ -51,7 +51,7 @@ gem 'unicorn', '4.8.3'
 # Use to find missing/unused translations
 gem 'i18n-tasks', '0.7.7'
 # Error tracking
-gem 'rollbar', '1.1.0'
+gem 'rollbar', '1.2.1'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -67,7 +67,7 @@ group :development do
   gem 'reek', '1.3.8'
   gem 'rails_best_practices', '1.15.4'
   # Query optimization monitoring
-  gem 'bullet', '4.13.2'
+  gem 'bullet', '4.14.0'
   # Debugging information
   gem 'rails-footnotes', '4.1.1'
   # Better error pages
@@ -90,7 +90,7 @@ end
 
 group :test do
   # Helps in testing by simulating how a real user would use app
-  gem 'capybara', '2.4.3'
+  gem 'capybara', '2.4.4'
   # Use factories instead of ActiveRecord objects
   gem 'factory_girl_rails', '4.4.1'
   # English-like matchers for unit-testing
