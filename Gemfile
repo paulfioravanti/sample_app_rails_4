@@ -26,7 +26,7 @@ gem 'turbolinks', '2.4.0'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
-gem 'jbuilder', '2.2.2'
+gem 'jbuilder', '2.2.3'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '3.1.7', require: false
 # App secret key configuration
@@ -51,7 +51,7 @@ gem 'unicorn', '4.8.3'
 # Use to find missing/unused translations
 gem 'i18n-tasks', '0.7.7'
 # Error tracking
-gem 'rollbar', '1.2.1'
+gem 'rollbar', '1.2.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -92,7 +92,7 @@ group :test do
   # Helps in testing by simulating how a real user would use app
   gem 'capybara', '2.4.4'
   # Use factories instead of ActiveRecord objects
-  gem 'factory_girl_rails', '4.4.1'
+  gem 'factory_girl_rails', '4.5.0'
   # English-like matchers for unit-testing
   gem 'shoulda-matchers', '2.7.0'
   gem 'database_cleaner', '1.3.0'
