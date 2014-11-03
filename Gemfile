@@ -2,11 +2,11 @@ source 'https://rubygems.org'
 ruby File.read('.ruby-version')
 
 # Edge Rails: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.1.7'
 # Postgres as database for Active Record
 gem 'pg', '0.17.1'
 # Use SCSS for stylesheets
-gem 'sass-rails', '4.0.3'
+gem 'sass-rails', '4.0.4'
 # Twitter frameworks to make nice UI design elements
 gem 'bootstrap-sass', '2.3.2.2'
 # will_paginate pagination for Bootstrap
@@ -22,7 +22,7 @@ gem 'coffee-rails', '4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '3.1.2'
 # Speed up application links
-gem 'turbolinks', '2.4.0'
+gem 'turbolinks', '2.5.1'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
@@ -51,7 +51,7 @@ gem 'unicorn', '4.8.3'
 # Use to find missing/unused translations
 gem 'i18n-tasks', '0.7.8'
 # Error tracking
-gem 'rollbar', '1.2.4'
+gem 'rollbar', '1.2.7'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -101,7 +101,7 @@ group :test do
   # guard/spork integration
   gem 'guard-spork', '1.5.1'
   # Helps in debugging tests by being able to launch browser
-  gem 'launchy', '2.4.2'
+  gem 'launchy', '2.4.3'
   # Mac-dependent gems for Guard notifications
   gem 'rb-fsevent', '0.9.4', require: false
   gem 'growl', '1.0.3'
