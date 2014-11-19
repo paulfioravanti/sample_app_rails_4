@@ -22,11 +22,11 @@ gem 'coffee-rails', '4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '3.1.2'
 # Speed up application links
-gem 'turbolinks', '2.5.1'
+gem 'turbolinks', '2.5.2'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
-gem 'jbuilder', '2.2.4'
+gem 'jbuilder', '2.2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '3.1.9', require: false
 # App secret key configuration
@@ -51,7 +51,7 @@ gem 'unicorn', '4.8.3'
 # Use to find missing/unused translations
 gem 'i18n-tasks', '0.7.8'
 # Error tracking
-gem 'rollbar', '1.2.7'
+gem 'rollbar', '1.2.8'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -64,12 +64,12 @@ group :development do
   # Security checking
   gem 'brakeman', '2.6.3'
   # Code quality
-  gem 'reek', '1.3.8'
+  gem 'reek', '1.4.0'
   gem 'rails_best_practices', '1.15.4'
   # Query optimization monitoring
   gem 'bullet', '4.14.0'
   # Debugging information
-  gem 'rails-footnotes', '4.1.2'
+  gem 'rails-footnotes', '4.1.4'
   # Better error pages
   gem 'better_errors', '2.0.0'
   gem 'binding_of_caller', '0.7.2'
@@ -99,7 +99,7 @@ group :test do
   # Speed up test server
   gem 'spork-rails', '4.0.0'
   # guard/spork integration
-  gem 'guard-spork', '1.5.1'
+  gem 'guard-spork', '2.0.1'
   # Helps in debugging tests by being able to launch browser
   gem 'launchy', '2.4.3'
   # Mac-dependent gems for Guard notifications
@@ -107,7 +107,7 @@ group :test do
   gem 'growl', '1.0.3'
   # Code coverage reports
   gem 'simplecov', '0.9.1', require: false
-  gem 'coveralls', '0.7.1', require: false
+  gem 'coveralls', '0.7.2', require: false
 end
 
 group :production do
