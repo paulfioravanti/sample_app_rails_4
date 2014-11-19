@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby File.read('.ruby-version')
 
 # Edge Rails: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.7'
+gem 'rails', '4.1.8'
 # Postgres as database for Active Record
 gem 'pg', '0.17.1'
 # Use SCSS for stylesheets
