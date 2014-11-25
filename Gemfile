@@ -6,7 +6,7 @@ gem 'rails', '4.1.8'
 # Postgres as database for Active Record
 gem 'pg', '0.17.1'
 # Use SCSS for stylesheets
-gem 'sass-rails', '4.0.4'
+gem 'sass-rails', '4.0.5'
 # Twitter frameworks to make nice UI design elements
 gem 'bootstrap-sass', '2.3.2.2'
 # will_paginate pagination for Bootstrap
@@ -14,7 +14,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 # Font Awesome icons
 gem 'font-awesome-sass-rails', '3.0.2.2'
 # Simplified forms
-gem 'simple_form', '3.0.2'
+gem 'simple_form', '3.1.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.5.3'
 # Use CoffeeScript for .js.coffee assets and views
@@ -45,7 +45,7 @@ gem 'rails-i18n', '4.0.3'
 # For fake example users with “realistic” names/emails
 gem 'faker', '1.4.3'
 # i18n for database content
-gem 'globalize', '4.0.2'
+gem 'globalize', '4.0.3'
 # Switch away from WEBrick
 gem 'unicorn', '4.8.3'
 # Use to find missing/unused translations
