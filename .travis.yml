@@ -57,4 +57,4 @@ deploy:
   api_key: $HEROKU_API_KEY
   run: rake db:migrate
   on:
-    rvm: 2.0.0
+    rvm: <%= ruby File.read('.ruby-version').chomp %>
