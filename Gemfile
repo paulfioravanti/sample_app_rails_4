@@ -51,7 +51,7 @@ gem 'unicorn', '4.8.3'
 # Use to find missing/unused translations
 gem 'i18n-tasks', '0.7.8'
 # Error tracking
-gem 'rollbar', '1.2.10'
+gem 'rollbar', '1.2.13'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -99,7 +99,7 @@ group :test do
   # Speed up test server
   gem 'spork-rails', '4.0.0'
   # guard/spork integration
-  gem 'guard-spork', '2.0.1'
+  gem 'guard-spork', '2.0.2'
   # Helps in debugging tests by being able to launch browser
   gem 'launchy', '2.4.3'
   # Mac-dependent gems for Guard notifications
@@ -112,5 +112,5 @@ end
 
 group :production do
   # Serve assets in production and set logger to standard out on Heroku
-  gem 'rails_12factor', '0.0.2'
+  gem 'rails_12factor', '0.0.3'
 end
