@@ -16,13 +16,13 @@ gem 'font-awesome-sass-rails', '3.0.2.2'
 # Simplified forms
 gem 'simple_form', '3.1.0'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '2.5.3'
+gem 'uglifier', '2.6.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '3.1.2'
 # Speed up application links
-gem 'turbolinks', '2.5.2'
+gem 'turbolinks', '2.5.3'
 # Get javascript that binds on jQuery.ready() working with Turbolinks
 # gem 'jquery-turbolinks', '1.0.0'
 # Build JSON APIs with ease
@@ -82,7 +82,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '3.1.0'
   # for autotesting with rspec
-  gem 'guard-rspec', '4.3.1'
+  gem 'guard-rspec', '4.4.2'
   # Prettier RSpec output
   gem 'fuubar', '2.0.0'
   gem 'rspec-legacy_formatters' # until Foobar updates
